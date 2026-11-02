@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI agents for KYC, AML and compliance operations | Verkflo</title>
+  <meta name="description" content="Verkflo automates your written KYC, KYB and AML procedures as versioned AI agents for banks and fintechs, with human review and a hash-chained audit log.">
+  <link rel="canonical" href="https://verkflo.com/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="AI agents for KYC, AML and compliance operations">
+  <meta property="og:description" content="Verkflo automates your written KYC, KYB and AML procedures as versioned AI agents for banks and fintechs, with human review and a hash-chained audit log.">
+  <meta property="og:url" content="https://verkflo.com/">
+  <!-- chrome:seo -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Verkflo">
+  <meta property="og:image" content="https://verkflo.com/assets/og/verkflo-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Verkflo: AI agents for KYC, AML and compliance operations">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://verkflo.com/assets/og/verkflo-share.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://verkflo.com/#website","url":"https://verkflo.com/","name":"Verkflo","inLanguage":"en"},{"@type":"SoftwareApplication","@id":"https://verkflo.com/#software","name":"Verkflo","url":"https://verkflo.com/","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Verkflo turns written procedures into versioned AI agent workflows for KYC, KYB, AML and operations teams at banks and fintechs. Runs follow a published version, pause for human review where rules say, and are recorded in a hash-chained audit log.","featureList":["Versioned specs; each run records the version it followed","Human review pauses set by your procedure","CEL rules choose branches","Hash-chained audit log with verification"],"brand":{"@type":"Brand","name":"Verkflo"},"isPartOf":{"@id":"https://verkflo.com/#website"}}]}</script>
+  <!-- /chrome:seo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=bfd8e12f">
+  <script type="module" src="/js/main.js?v=80a5a208"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <!-- chrome:header -->
+  <div class="announce">
+    <p>Verkflo is in early access. <a href="/demo/">Book a demo</a></p>
+  </div>
+  <header class="nav" id="top">
+    <div class="nav__inner wrap">
+      <a class="wordmark" href="/" aria-label="Verkflo home"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M7 8l5 9 5-9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Verkflo</span></a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+      <nav id="nav-menu" class="nav__menu" aria-label="Main">
+        <a href="/use-cases/">Use cases</a>
+        <a href="/security/">Security</a>
+        <a href="/#integrations">Integrations</a>
+        <a href="/solutions/">Solutions</a>
+        <div class="nav__cta">
+          <a class="btn btn--ghost" href="/demo/">Book a demo</a>
+          <a class="btn" href="/demo/">Get started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- /chrome:header -->
+  <main id="main" tabindex="-1">
+    <div class="hero wrap">
+      <p class="shapes" aria-hidden="true"><i class="shape shape--blue"></i><i class="shape shape--teal"></i><i class="shape shape--amber"></i><i class="shape shape--slate"></i></p>
+      <h1>Turn KYC and AML procedures into AI agents you can audit</h1>
+      <p class="hero__lede">Upload your KYC, KYB or AML procedure. Verkflo automates it as a versioned agent that pauses for review and logs each step.</p>
+      <div class="hero__cta">
+        <a class="btn btn--lg" href="/demo/">Get started</a>
+        <a class="btn btn--ghost btn--lg" href="/demo/">Book a demo</a>
+      </div>
+    </div>
+
+    <section id="product" class="hero-stage wrap" aria-label="Verkflo product preview">
+      <div class="stage" data-reveal data-herodemo>
+        <div class="hero-stage__inner">
+          <div class="appwin frame">
+            <div class="appwin__bar"><span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span></div>
+            <div class="appwin__body">
+              <aside class="appwin__side">
+                <p class="appwin__new"><span aria-hidden="true">+</span> New procedure</p>
+                <p class="grp">Onboarding</p>
+                <ul>
+                  <li class="is-active" data-pick="side-kyc"><i class="sq sq--purple"></i>KYC Review Agent</li>
+                  <li data-pick="side"><i class="sq sq--pink"></i>Periodic Review</li>
+                </ul>
+                <p class="grp">Screening</p>
+                <ul>
+                  <li><i class="sq sq--blue"></i>Sanctions Screening</li>
+                  <li><i class="sq sq--green"></i>Vendor Onboarding</li>
+                </ul>
+                <p class="grp">Workflows <span class="tag-soon">Coming soon</span></p>
+              </aside>
+              <div class="appwin__main">
+                <span class="appwin__mark" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M6 7l6 11 6-11" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <p class="appwin__name">KYC Review Agent</p>
+                <p class="appwin__src">From a procedure</p>
+                <ul class="appwin__logos">
+                  <li><img src="/assets/logos/sumsub.png" alt="Sumsub" width="18" height="18"></li>
+                  <li><img src="/assets/logos/complyadvantage.jpg" alt="ComplyAdvantage" width="18" height="18"></li>
+                  <li><img src="/assets/logos/googledrive.svg" alt="Google Drive" width="18" height="18"></li>
+                </ul>
+              </div>
+              <div class="appwin__panel">
+                <p class="appwin__tabs"><b>Agent</b><span>Settings</span></p>
+                <p class="row row--head">Version <span class="pill">v1.3 published</span></p>
+                <p class="row row--head">Connections</p>
+                <ul class="conns">
+                  <li><img src="/assets/logos/sumsub.png" alt="" width="16" height="16">Sumsub<i class="chk"></i></li>
+                  <li data-pick="conn"><img src="/assets/logos/complyadvantage.jpg" alt="" width="16" height="16">ComplyAdvantage<i class="chk"></i></li>
+                  <li><img src="/assets/logos/googledrive.svg" alt="" width="16" height="16">Google Drive<i class="chk"></i></li>
+                </ul>
+                <p class="row row--head">Rules</p>
+                <p class="rule" data-pick="rules"><code>risk_rating == "High"</code><span aria-hidden="true">→</span> review</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chartwin frame">
+            <div class="appwin__bar"><span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span><span class="sample">Sample data</span></div>
+            <div class="chartwin__grid">
+              <div class="pane">
+                <p class="pane__t">Runs <span>Last 30 days</span></p>
+                <svg class="pane__line" viewBox="0 0 240 80" preserveAspectRatio="none" aria-hidden="true">
+                  <defs><linearGradient id="runs-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f6fd0" stop-opacity=".22"/><stop offset="1" stop-color="#2f6fd0" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M0 52 L12 46 L24 50 L36 38 L48 44 L60 30 L72 36 L84 26 L96 40 L108 34 L120 20 L132 30 L144 24 L156 12 L168 28 L180 22 L192 32 L204 18 L216 26 L228 20 L240 24 L240 80 L0 80Z" fill="url(#runs-fill)"/>
+                  <path d="M0 52 L12 46 L24 50 L36 38 L48 44 L60 30 L72 36 L84 26 L96 40 L108 34 L120 20 L132 30 L144 24 L156 12 L168 28 L180 22 L192 32 L204 18 L216 26 L228 20 L240 24" fill="none" stroke="#2f6fd0" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+                </svg>
+              </div>
+              <div class="pane">
+                <p class="pane__t">Outcomes <span>Completed / reviewed</span></p>
+                <ul class="pane__bars" aria-hidden="true">
+                  <li style="--h:62%;--g:20%"></li><li style="--h:74%;--g:22%"></li><li style="--h:58%;--g:18%"></li><li style="--h:80%;--g:26%"></li><li style="--h:70%;--g:24%"></li><li style="--h:86%;--g:30%"></li><li style="--h:66%;--g:22%"></li><li style="--h:78%;--g:34%"></li><li style="--h:90%;--g:38%"></li><li style="--h:72%;--g:32%"></li><li style="--h:84%;--g:36%"></li><li style="--h:76%;--g:30%"></li><li style="--h:88%;--g:40%"></li><li style="--h:82%;--g:34%"></li>
+                </ul>
+              </div>
+              <ul class="pane pane--list">
+                <li>KYC review<b>1,240</b></li>
+                <li>Sanctions screening<b>860</b></li>
+                <li>Vendor onboarding<b>410</b></li>
+                <li>Periodic review<b>385</b></li>
+                <li>Fraud alerts<b>240</b></li>
+              </ul>
+              <div class="pane">
+                <p class="pane__t">Reviews</p>
+                <ul class="pane__people">
+                  <li><img src="/assets/avatars/tom.jpg" alt="" width="28" height="28"><b>Tom</b><span>84 reviews</span></li>
+                  <li><img src="/assets/avatars/priya.jpg" alt="" width="28" height="28"><b>Priya</b><span>71 reviews</span></li>
+                  <li><img src="/assets/avatars/lena.jpg" alt="" width="28" height="28"><b>Lena</b><span>63 reviews</span></li>
+                  <li><img src="/assets/avatars/marcus.jpg" alt="" width="28" height="28"><b>Marcus</b><span>52 reviews</span></li>
+                  <li><img src="/assets/avatars/mei.jpg" alt="" width="28" height="28"><b>Maya</b><span>47 reviews</span></li>
+                  <li><img src="/assets/avatars/diego.jpg" alt="" width="28" height="28"><b>Diego</b><span>38 reviews</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <span class="cursor" aria-hidden="true">
+            <span class="cursor__ripple"></span>
+            <svg class="cursor__arrow" width="22" height="22" viewBox="0 0 22 22"><path d="M3 2l14 7.5-6 1.6-2.4 6z" fill="#111214" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <span class="cursor__badge"><svg width="12" height="12" viewBox="0 0 24 24"><path d="M6 7l6 11 6-11" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="who" class="who section wrap" aria-labelledby="who-title">
+      <div class="who__head" data-reveal>
+        <h2 id="who-title">AI agents for bank and fintech compliance teams</h2>
+        <ul class="who__labels">
+          <li>Runs follow your procedure</li>
+          <li>Each step logged</li>
+        </ul>
+      </div>
+      <ul class="who__grid" data-reveal>
+        <li>Banks</li><li>Credit unions</li><li>Fintechs</li><li>Payments</li><li>MSBs</li>
+        <li>Crypto exchanges</li><li>Insurers</li><li>Lenders</li><li>Brokerages</li><li>Wealth managers</li>
+        <li>Remittance</li><li>Card issuers</li><li>Marketplaces</li><li>Neobanks</li><li>Trust companies</li>
+      </ul>
+    </section>
+
+    <section id="build" class="build section wrap" aria-labelledby="build-title">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+          <symbol id="i-kyc" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></symbol>
+          <symbol id="i-sanctions" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></symbol>
+          <symbol id="i-vendor" viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13M9 21v-6h6v6"/></symbol>
+          <symbol id="i-periodic" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4"/></symbol>
+          <symbol id="i-fraud" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></symbol>
+          <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></symbol>
+          <symbol id="i-builder" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M10 6.5h4a3 3 0 0 1 3 3V14"/></symbol>
+          <symbol id="i-webhook" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+          <symbol id="i-schedule" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+          <symbol id="i-cel" viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></symbol>
+          <symbol id="i-evals" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 12l2 2 4-4"/></symbol>
+          <symbol id="i-sandbox" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-6 10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2l-6-10V3"/></symbol>
+          <symbol id="i-versions" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></symbol>
+          <symbol id="i-v" viewBox="0 0 24 24"><path d="M7 8l5 9 5-9"/></symbol>
+          <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5M11 11V4.5a1.5 1.5 0 0 1 3 0V11M14 11V6a1.5 1.5 0 0 1 3 0v8a6 6 0 0 1-6 6h-1a5 5 0 0 1-4-2l-3-4a1.5 1.5 0 0 1 2.3-1.8L8 15"/></symbol>
+          <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+        </defs>
+      </svg>
+
+      <div class="build__copy" data-reveal>
+        <p class="eyebrow">Build</p>
+        <h2 id="build-title">The people who know the work build the agent</h2>
+        <p class="build__lede">Start from the procedure your team already follows. Verkflo turns it into steps, and each run follows the published version.</p>
+        <div class="build__cta">
+          <a class="btn btn--lg" href="/demo/">Book a demo</a>
+          <a class="btn btn--ghost btn--lg" href="#build-card">See a run</a>
+        </div>
+        <ul class="build__feats">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-upload"/></svg>Procedure upload</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-builder"/></svg>Workflow builder <span class="tag-soon">Coming soon</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-webhook"/></svg>Webhook triggers</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-schedule"/></svg>Schedules</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-cel"/></svg>CEL rules</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-evals"/></svg>Evals</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-sandbox"/></svg>Sandbox and live</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-versions"/></svg>Versioned specs</li>
+        </ul>
+      </div>
+
+      <div id="build-card" class="runcard" data-tabs data-rundemo data-reveal>
+        <div role="tablist" aria-label="Example runs" aria-orientation="vertical" class="runcard__rail">
+          <button role="tab" id="tab-run-kyc" aria-controls="run-kyc" aria-selected="true"><span class="runcard__ico"><svg class="ico" aria-hidden="true"><use href="#i-kyc"/></svg></span>KYC</button>
+          <button role="tab" id="tab-run-sanctions" aria-controls="run-sanctions" aria-selected="false"><span class="runcard__ico"><svg class="ico" aria-hidden="true"><use href="#i-sanctions"/></svg></span>Sanctions</button>
+          <button role="tab" id="tab-run-vendor" aria-controls="run-vendor" aria-selected="false"><span class="runcard__ico"><svg class="ico" aria-hidden="true"><use href="#i-vendor"/></svg></span>Vendor</button>
+          <button role="tab" id="tab-run-periodic" aria-controls="run-periodic" aria-selected="false"><span class="runcard__ico"><svg class="ico" aria-hidden="true"><use href="#i-periodic"/></svg></span>Periodic</button>
+          <button role="tab" id="tab-run-fraud" aria-controls="run-fraud" aria-selected="false"><span class="runcard__ico"><svg class="ico" aria-hidden="true"><use href="#i-fraud"/></svg></span>Fraud</button>
+        </div>
+
+        <div class="runcard__panels">
+        <div role="tabpanel" id="run-kyc" aria-labelledby="tab-run-kyc" tabindex="0" class="run">
+          <div class="run__head">
+            <div>
+              <p class="run__agent">KYC Review Agent</p>
+              <p class="run__desc">Reviews each new applicant against your onboarding procedure.</p>
+              <ul class="run__chips"><li><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="Sumsub" width="16" height="16"></li><li><img loading="lazy" decoding="async" src="/assets/logos/complyadvantage.jpg" alt="ComplyAdvantage" width="16" height="16"></li><li class="run__more" title="Verkflo rules and checks">+1</li></ul>
+              <p class="run__trigger">Trigger: Sumsub · applicantReviewed</p>
+            </div>
+            <p class="run__src"><span class="src">From a procedure</span> <span class="run__ver">KYC review · v1.3</span></p>
+          </div>
+          <div class="run__feed">
+            <div class="run__ask">
+              <p class="run__who"><img loading="lazy" decoding="async" src="/assets/avatars/mei.jpg" alt="" width="20" height="20">Maya</p>
+              <p class="run__bubble">New applicant: Halden Trading. Run the onboarding review.</p>
+            </div>
+            <p class="run__label">KYC Review Agent</p>
+            <ol class="run__steps">
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><img loading="lazy" decoding="async" class="lg" src="/assets/logos/sumsub.png" alt="" width="14" height="14"><span>Pulled the applicant, ID and proof of address from Sumsub</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Checked the documents against section 3 of the procedure</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><img loading="lazy" decoding="async" class="lg" src="/assets/logos/complyadvantage.jpg" alt="" width="14" height="14"><span>Screened the director and owners in ComplyAdvantage: no hits</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Risk rating is Medium, so no reviewer is needed <code>risk_rating != "High"</code></span></li>
+            </ol>
+            <div class="run-summary">
+              <p><strong>Approved.</strong> Halden Trading meets every check in v1.3 of the procedure. The evidence, and the rule that skipped review, are in the audit log.</p>
+              <p class="run__foot">Ran in 38s · 4 steps · 0 reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="run-sanctions" aria-labelledby="tab-run-sanctions" tabindex="0" class="run">
+          <div class="run__head">
+            <div>
+              <p class="run__agent">Sanctions Screening Agent</p>
+              <p class="run__desc">Screens every new counterparty before the first payment goes out.</p>
+              <ul class="run__chips"><li><img loading="lazy" decoding="async" src="/assets/logos/complyadvantage.jpg" alt="ComplyAdvantage" width="16" height="16"></li><li class="run__more" title="Verkflo rules and checks">+1</li></ul>
+              <p class="run__trigger">Trigger: inbound webhook · new counterparty</p>
+            </div>
+            <p class="run__src"><span class="src">From a procedure</span> <span class="run__ver">Sanctions screening · v2.0</span></p>
+          </div>
+          <div class="run__feed">
+            <div class="run__ask">
+              <p class="run__who"><img loading="lazy" decoding="async" src="/assets/avatars/priya.jpg" alt="" width="20" height="20">Priya</p>
+              <p class="run__bubble">Screen the new counterparty Corvid Freight before the first payment.</p>
+            </div>
+            <p class="run__label">Sanctions Screening Agent</p>
+            <ol class="run__steps">
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><img loading="lazy" decoding="async" class="lg" src="/assets/logos/complyadvantage.jpg" alt="" width="14" height="14"><span>Screened Corvid Freight and its 2 directors in ComplyAdvantage</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><img loading="lazy" decoding="async" class="lg" src="/assets/logos/complyadvantage.jpg" alt="" width="14" height="14"><span>Found 1 possible match on a director's name, score 0.91</span></li>
+              <li class="run-step" data-pause><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Asked a reviewer, because any sanctions hit needs a person <span class="run-step__wait">Waiting for a reviewer</span><span class="run-step__note">Tom: false positive, date of birth differs</span></span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Recorded the decision and released the payment hold</span></li>
+            </ol>
+            <div class="run-summary">
+              <p><strong>Cleared after review.</strong> One possible match, ruled a false positive by Tom. The match details, his reason and the procedure version are in the audit log.</p>
+              <p class="run__foot">Ran in 2m 10s · 4 steps · 1 review</p>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="run-vendor" aria-labelledby="tab-run-vendor" tabindex="0" class="run">
+          <div class="run__head">
+            <div>
+              <p class="run__agent">Vendor Onboarding Agent</p>
+              <p class="run__desc">Checks new suppliers' papers and screens them before setup.</p>
+              <ul class="run__chips"><li><img loading="lazy" decoding="async" src="/assets/logos/googledrive.svg" alt="Google Drive" width="16" height="16"></li><li><img loading="lazy" decoding="async" src="/assets/logos/complyadvantage.jpg" alt="ComplyAdvantage" width="16" height="16"></li><li class="run__more" title="Verkflo rules and checks">+1</li></ul>
+              <p class="run__trigger">Trigger: inbound webhook · new vendor</p>
+            </div>
+            <p class="run__src"><span class="src">Built as a workflow</span> <span class="tag-soon">Coming soon</span> <span class="run__ver">Vendor onboarding · v1.0</span></p>
+          </div>
+          <div class="run__feed">
+            <div class="run__ask">
+              <p class="run__who"><img loading="lazy" decoding="async" src="/assets/avatars/mei.jpg" alt="" width="20" height="20">Maya</p>
+              <p class="run__bubble">Onboard Lumen Print as a new supplier.</p>
+            </div>
+            <p class="run__label">Vendor Onboarding Agent</p>
+            <ol class="run__steps">
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><img loading="lazy" decoding="async" class="lg" src="/assets/logos/googledrive.svg" alt="" width="14" height="14"><span>Found the vendor pack in Google Drive</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Read the registration certificate and the bank letter</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><img loading="lazy" decoding="async" class="lg" src="/assets/logos/complyadvantage.jpg" alt="" width="14" height="14"><span>Screened the company and its owners in ComplyAdvantage: no hits</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Bank account name matches the registration <code>bank.name == registration.name</code></span></li>
+            </ol>
+            <div class="run-summary">
+              <p><strong>Vendor approved.</strong> Lumen Print passed all four steps. The documents and screening result are linked to the run.</p>
+              <p class="run__foot">Ran in 52s · 4 steps · 0 reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="run-periodic" aria-labelledby="tab-run-periodic" tabindex="0" class="run">
+          <div class="run__head">
+            <div>
+              <p class="run__agent">Periodic Review Agent</p>
+              <p class="run__desc">Refreshes low-risk customers on schedule and flags what changed.</p>
+              <ul class="run__chips"><li><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="Sumsub" width="16" height="16"></li><li class="run__more" title="Verkflo rules and checks">+1</li></ul>
+              <p class="run__trigger">Trigger: monthly schedule</p>
+            </div>
+            <p class="run__src"><span class="src">From a procedure</span> <span class="run__ver">Periodic review · v1.1</span></p>
+          </div>
+          <div class="run__feed">
+            <div class="run__ask">
+              <p class="run__who"><img loading="lazy" decoding="async" src="/assets/avatars/priya.jpg" alt="" width="20" height="20">Priya</p>
+              <p class="run__bubble">Run this month's review of low-risk customers.</p>
+            </div>
+            <p class="run__label">Periodic Review Agent</p>
+            <ol class="run__steps">
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Listed 214 low-risk customers due for review</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><img loading="lazy" decoding="async" class="lg" src="/assets/logos/sumsub.png" alt="" width="14" height="14"><span>Refreshed their data from Sumsub</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>211 unchanged, closed with no action</span></li>
+              <li class="run-step" data-pause><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>3 changed address or ownership, sent to the review queue <span class="run-step__wait">Waiting for a reviewer</span><span class="run-step__note">Priya: 3 reviewed, 1 raised to Medium</span></span></li>
+            </ol>
+            <div class="run-summary">
+              <p><strong>Review complete.</strong> 211 closed automatically, 3 reviewed by Priya, 1 risk rating raised. Each case links to the version it ran on.</p>
+              <p class="run__foot">Ran in 6m 04s · 4 steps · 1 review</p>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="run-fraud" aria-labelledby="tab-run-fraud" tabindex="0" class="run">
+          <div class="run__head">
+            <div>
+              <p class="run__agent">Fraud Triage Agent</p>
+              <p class="run__desc">Sorts card alerts into likely benign and needs a look.</p>
+              <ul class="run__chips"><li class="lg lg--api" title="Custom REST">API</li><li><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="Sumsub" width="16" height="16"></li><li class="run__more" title="Verkflo rules and checks">+1</li></ul>
+              <p class="run__trigger">Trigger: inbound webhook · new alert</p>
+            </div>
+            <p class="run__src"><span class="src">Built as a workflow</span> <span class="tag-soon">Coming soon</span> <span class="run__ver">Fraud alert triage · v0.9</span></p>
+          </div>
+          <div class="run__feed">
+            <div class="run__ask">
+              <p class="run__who"><img loading="lazy" decoding="async" src="/assets/avatars/tom.jpg" alt="" width="20" height="20">Tom</p>
+              <p class="run__bubble">Triage alert 4471: three card payments from different devices.</p>
+            </div>
+            <p class="run__label">Fraud Triage Agent</p>
+            <ol class="run__steps">
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--api" aria-hidden="true">API</span><span>Pulled the alert and device history from the internal watchlist API</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><img loading="lazy" decoding="async" class="lg" src="/assets/logos/sumsub.png" alt="" width="14" height="14"><span>Checked the customer's Sumsub profile: verified, low risk</span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Two of the three devices were seen before <code>new_devices &lt; 2</code></span></li>
+              <li class="run-step"><span class="run-step__icon" aria-hidden="true"></span><span class="lg lg--v" aria-hidden="true"><svg class="ico"><use href="#i-v"/></svg></span><span>Closed the alert and noted the reason</span></li>
+            </ol>
+            <div class="run-summary">
+              <p><strong>Closed as benign.</strong> The rule that closed it, and the data it used, are attached to the alert.</p>
+              <p class="run__foot">Ran in 19s · 4 steps · 0 reviews</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="review" class="section wrap" aria-labelledby="review-title">
+      <div class="section__head section__head--left" data-reveal>
+        <h2 id="review-title">How a run follows your procedure</h2>
+        <p>A run starts from a signed trigger, calls your tools with keys held in a vault and stops for a person where a rule says so.</p>
+      </div>
+      <div class="bento" data-reveal>
+        <article class="bcard bcard--tall" data-bento="case">
+          <div class="bmock" aria-hidden="true">
+            <div class="bmock__win">
+              <div class="bmock__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="bmock__url"></span></div>
+              <div class="bmock__body">
+                <div class="bmock__side"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="bmock__main">
+                  <div class="bmock__head">
+                    <i class="sk sk--title"></i><span class="bmock__pill"><span class="swap swap--a">Draft</span><span class="swap swap--b">Approved</span></span>
+                    <span class="bmock__btn" data-target><span class="swap swap--a">Approve</span><span class="swap swap--b">✓ Approved</span></span>
+                  </div>
+                  <div class="bmock__fields"><span class="bmock__field"><i class="sk sk--md"></i></span><span class="bmock__field"><i class="sk"></i></span><span class="bmock__field"><i class="sk"></i></span></div>
+                  <div class="bmock__table">
+                    <div class="bmock__tr bmock__tr--h"><span>Item</span><span>Source</span><span>Status</span></div>
+                    <div class="bmock__tr"><i class="sk sk--md"></i><i class="sk sk--sm"></i><i class="sk"></i></div>
+                    <div class="bmock__tr"><i class="sk sk--lg"></i><i class="sk sk--sm"></i><i class="sk sk--md"></i></div>
+                    <div class="bmock__tr"><i class="sk"></i><i class="sk sk--sm"></i><i class="sk"></i></div>
+                  </div>
+                  <dl class="bmock__totals">
+                    <div><dt>Checks passed</dt><dd><i class="sk"></i></dd></div>
+                    <div><dt>Open flags</dt><dd><i class="sk"></i></dd></div>
+                    <div><dt>Decision</dt><dd><i class="sk sk--md"></i></dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <span class="cursor">
+              <span class="cursor__ripple"></span>
+              <svg class="cursor__arrow" width="22" height="22" viewBox="0 0 22 22"><path d="M3 2l14 7.5-6 1.6-2.4 6z" fill="#111214" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              <span class="cursor__badge"><svg width="12" height="12" viewBox="0 0 24 24"><path d="M6 7l6 11 6-11" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </span>
+          </div>
+          <div class="bcard__cap">
+            <h3>Steps from your procedure</h3>
+            <p>Runs follow the published version step by step, using your connected tools.</p>
+          </div>
+        </article>
+
+        <article class="bcard" data-bento="webhook">
+          <div class="bcard__text"><h3>Signed webhook triggers</h3><p>A webhook trigger starts a run only after its signature checks out.</p></div>
+          <div class="bviz bviz--hook" aria-hidden="true">
+            <ul class="hook__src">
+              <li><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="" width="18" height="18"></li>
+              <li><svg class="ico"><use href="#i-webhook"/></svg></li>
+              <li><svg class="ico"><use href="#i-schedule"/></svg></li>
+              <li><img loading="lazy" decoding="async" src="/assets/logos/complyadvantage.jpg" alt="" width="18" height="18"></li>
+              <li><span class="lg--txt">API</span></li>
+            </ul>
+            <span class="hook__pill"><span class="swap swap--a"><span class="spin"></span>Verifying signature…</span><span class="swap swap--b"><span class="okdot"></span>Signature verified</span></span>
+            <span class="hook__lines"><i></i><i></i><i></i><i></i></span>
+          </div>
+        </article>
+
+        <article class="bcard" data-bento="vault">
+          <div class="bcard__text"><h3>Secrets in a vault</h3><p>Each connection stores a vault reference, and steps call the tool through it. The key stays in the vault.</p></div>
+          <div class="bviz bviz--vault" aria-hidden="true">
+            <span class="vault__pill"><span class="swap swap--a vault__mask">••••••••</span><span class="swap swap--b vault__ref"><svg class="ico"><use href="#i-sandbox"/></svg>vault://workspace/sumsub</span></span>
+          </div>
+        </article>
+
+        <article class="bcard" data-bento="human">
+          <div class="bcard__text"><h3>Human in the loop</h3><p>When a rule says a person decides, the run pauses, asks, and carries on from the answer.</p></div>
+          <div class="bviz bviz--chat" aria-hidden="true">
+            <div class="cm cm--req"><p class="cm__who"><span class="cm__badge"><svg width="10" height="10" viewBox="0 0 24 24"><path d="M6 7l6 11 6-11" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Verkflo</p><p class="cm__bubble">Can you review Corvid Freight? Possible sanctions match.</p></div>
+            <div class="cm cm--reply"><p class="cm__who"><img loading="lazy" decoding="async" src="/assets/avatars/tom.jpg" alt="" width="16" height="16">Tom</p><p class="cm__bubble">Approved, false positive ✓</p></div>
+          </div>
+        </article>
+
+        <article class="bcard" data-bento="record">
+          <div class="bcard__text"><h3>Every step recorded</h3><p>Each run keeps a timeline of what it did, who decided, and when, in the audit log.</p></div>
+          <div class="bviz bviz--rec">
+            <p class="rec__label"><span class="rec__dot" aria-hidden="true"></span>Recording.</p>
+            <div class="rec__win">
+              <ol class="rec__list">
+                <li class="rec__row"><i class="rec__thumb" aria-hidden="true"></i><span>Fetched applicant from Sumsub</span><time>0:04</time></li>
+                <li class="rec__row"><i class="rec__thumb" aria-hidden="true"></i><span>Screened in ComplyAdvantage</span><time>0:11</time></li>
+                <li class="rec__row"><i class="rec__thumb" aria-hidden="true"></i><span>Paused for review</span><time>0:12</time></li>
+                <li class="rec__row"><i class="rec__thumb" aria-hidden="true"></i><span>Tom approved</span><time>2:05</time></li>
+                <li class="rec__row"><i class="rec__thumb" aria-hidden="true"></i><span>Released payment hold</span><time>2:10</time></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="channels" class="section wrap" aria-labelledby="channels-title">
+      <div class="chan-layout">
+        <div class="chan-aside">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow">Reviews</p>
+            <h2 id="channels-title">Reviews that come to your team</h2>
+            <p>Soon, reviewers will get the request where they already are, and answer it there.</p>
+          </div>
+          <ul class="chan-list" data-chan-list>
+            <li><a href="#chan-slack" class="chan-item is-active" data-chan="chan-slack"><img loading="lazy" decoding="async" src="/assets/logos/slack.svg" alt="" width="28" height="28"><span><strong>Slack <span class="tag-soon">Coming soon</span></strong><small>Ask Verkflo about a case from any channel</small></span></a></li>
+            <li><a href="#chan-teams" class="chan-item" data-chan="chan-teams"><img loading="lazy" decoding="async" src="/assets/logos/teams.svg" alt="" width="28" height="26"><span><strong>Microsoft Teams <span class="tag-soon">Coming soon</span></strong><small>Approve paused runs from chats and channels</small></span></a></li>
+            <li><a href="#chan-email" class="chan-item" data-chan="chan-email"><img loading="lazy" decoding="async" src="/assets/logos/gmail.svg" alt="" width="28" height="21"><span><strong>Email <span class="tag-soon">Coming soon</span></strong><small>Get review requests and reply from your inbox</small></span></a></li>
+          </ul>
+        </div>
+        <div class="chan-wins">
+          <div class="chan-win" id="chan-slack" data-chan-win>
+            <p class="chan-win__label"><img loading="lazy" decoding="async" src="/assets/logos/slack.svg" alt="" width="20" height="20">Slack</p>
+            <div class="frame win win--slack" role="img" aria-label="Slack window (coming soon): teammates mention Verkflo in the kyc-reviews channel">
+              <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__nav" aria-hidden="true">&larr; &rarr; &#9719;</span><span class="win__search">Search Verkflo</span><span class="win__help" aria-hidden="true">?</span><span class="tag-soon">Coming soon</span></div>
+              <div class="win__body">
+                <div class="sl-side" aria-hidden="true">
+                  <p class="sl-group"><i class="sl-ico" style="background:#2eb67d"></i>Compliance</p>
+                  <p class="sl-ch is-on"># kyc-reviews</p><p class="sl-ch"># sanctions-alerts</p><p class="sl-ch is-mute"># periodic-reviews</p>
+                  <p class="sl-group"><i class="sl-ico" style="background:#ecb22e"></i>Operations</p>
+                  <p class="sl-ch"># vendor-onboarding</p><p class="sl-ch is-mute"># escalations</p>
+                  <p class="sl-group"><i class="sl-ico" style="background:#e01e5a"></i>Fraud</p>
+                  <p class="sl-ch"># fraud-alerts</p>
+                </div>
+                <div class="sl-main">
+                  <p class="sl-title"># kyc-reviews</p>
+                  <p class="sl-tabs" aria-hidden="true"><span class="is-on">Messages</span><span>Add canvas</span><span>Files</span></p>
+                  <div class="sl-msg"><img loading="lazy" decoding="async" src="/assets/avatars/tom.jpg" alt="" width="36" height="36"><div><p><b>Tom</b> <time>9:12 AM</time></p><p><span class="sl-at">@Verkflo</span> run the onboarding review for Halden Trading</p><p class="sl-react"><span>&#128172; 2</span><span>&#128293; 1</span></p><p class="sl-replies"><i class="sl-bot" aria-hidden="true"></i>3 Replies <time>4 minutes ago</time></p></div></div>
+                  <div class="sl-msg"><img loading="lazy" decoding="async" src="/assets/avatars/priya.jpg" alt="" width="36" height="36"><div><p><b>Priya</b> <time>9:30 AM</time></p><p><span class="sl-at">@Verkflo</span> why did Corvid Freight pause?</p><p class="sl-react"><span>&#128064; 3</span></p><p class="sl-replies"><i class="sl-bot" aria-hidden="true"></i>3 Replies <time>12 minutes ago</time></p></div></div>
+                  <div class="sl-msg"><img loading="lazy" decoding="async" src="/assets/avatars/diego.jpg" alt="" width="36" height="36"><div><p><b>Diego</b> <time>10:05 AM</time></p><p><span class="sl-at">@Verkflo</span> which periodic reviews are due this week?</p><p class="sl-react"><span>&#128077; 2</span></p><p class="sl-replies"><i class="sl-bot" aria-hidden="true"></i>3 Replies <time>just now</time></p></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chan-win" id="chan-teams" data-chan-win>
+            <p class="chan-win__label"><img loading="lazy" decoding="async" src="/assets/logos/teams.svg" alt="" width="20" height="19">Microsoft Teams</p>
+            <div class="frame win win--teams" role="img" aria-label="Microsoft Teams window (coming soon): Verkflo asks for approval in a compliance channel">
+              <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__nav" aria-hidden="true">&larr; &rarr;</span><span class="win__search">Search</span><span class="win__help" aria-hidden="true">?</span><span class="tag-soon">Coming soon</span></div>
+              <div class="win__body">
+                <div class="tm-side" aria-hidden="true">
+                  <p class="tm-h">Chat</p>
+                  <p class="tm-pills"><span class="is-on">Unread</span><span>Chats</span><span>Channels</span></p>
+                  <p class="tm-sub">Mentions</p>
+                  <p class="tm-chat"><img loading="lazy" decoding="async" src="/assets/avatars/priya.jpg" alt="" width="28" height="28"><span><b>Priya</b><small>Escalating to EDD</small></span></p>
+                  <p class="tm-chat"><img loading="lazy" decoding="async" src="/assets/avatars/marcus.jpg" alt="" width="28" height="28"><span><b>Marcus</b><small>Can you check Harbor Lane?</small></span></p>
+                  <p class="tm-chat"><img loading="lazy" decoding="async" src="/assets/avatars/mei.jpg" alt="" width="28" height="28"><span><b>Maya</b><small>Evidence folder is ready</small></span></p>
+                  <p class="tm-chat"><img loading="lazy" decoding="async" src="/assets/avatars/tom.jpg" alt="" width="28" height="28"><span><b>Tom</b><small>Approved, thanks</small></span></p>
+                </div>
+                <div class="tm-main">
+                  <p class="tm-head"><b>compliance-reviews</b> &middot; Compliance &middot; General <span class="tm-meet">Meet</span></p>
+                  <div class="tm-card">
+                    <p class="tm-card__who"><span class="avatar" aria-hidden="true">V</span><b>Verkflo</b> <time>11:05 AM</time></p>
+                    <p><b>Review needed:</b> Harbor Lane. PEP hit on a beneficial owner.</p>
+                    <p class="msg__actions" aria-hidden="true"><span class="btn">Approve</span><span class="btn btn--ghost">Escalate</span></p>
+                  </div>
+                  <div class="sl-msg"><img loading="lazy" decoding="async" src="/assets/avatars/priya.jpg" alt="" width="32" height="32"><div><p><b>Priya</b> <time>11:09 AM</time></p><p>Escalating to enhanced due diligence.</p></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chan-win" id="chan-email" data-chan-win>
+            <p class="chan-win__label"><img loading="lazy" decoding="async" src="/assets/logos/gmail.svg" alt="" width="20" height="15">Email</p>
+            <div class="frame win win--mail" role="img" aria-label="Email window (coming soon): Verkflo sends a review request to Lena">
+              <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__nav" aria-hidden="true">&larr; &rarr;</span><span class="win__search">Search mail</span><span class="win__help" aria-hidden="true">?</span><span class="tag-soon">Coming soon</span></div>
+              <div class="win__body">
+                <div class="ml-side" aria-hidden="true">
+                  <p class="ml-logo"><img loading="lazy" decoding="async" src="/assets/logos/gmail.svg" alt="Gmail logo" width="26" height="20">Gmail</p>
+                  <p class="ml-nav is-on">Inbox <b>12</b></p><p class="ml-nav">Starred</p><p class="ml-nav">Sent</p><p class="ml-nav">Drafts</p>
+                </div>
+                <div class="ml-main">
+                  <p class="ml-subject">Review needed: Ostrava Metals, high risk rating</p>
+                  <p class="ml-from"><span class="avatar" aria-hidden="true">V</span><span><b>Verkflo</b> <small>to Lena</small></span><time>8:47 AM</time></p>
+                  <div class="ml-body">
+                    <p class="ml-to"><img loading="lazy" decoding="async" src="/assets/avatars/lena.jpg" alt="" width="24" height="24">Hi Lena,</p>
+                    <p>Ostrava Metals was rated High by Sumsub. Under the onboarding procedure v1.3 this needs a reviewer before approval.</p>
+                    <p>The run is paused and the evidence is attached to the case.</p>
+                  </div>
+                  <p class="msg__actions" aria-hidden="true"><span class="btn btn--ghost">Reply</span><span class="btn btn--ghost">Forward</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roles" class="section wrap" aria-labelledby="roles-title">
+      <h2 id="roles-title" class="visually-hidden">How teams use Verkflo</h2>
+      <div class="gb" data-gb-root>
+        <article class="gb__item">
+          <div class="gb__card gbc-built" data-gb="built" aria-hidden="true">
+            <span class="gb__tag">Sample data</span>
+            <div class="bt__stack">
+              <div class="bt__past bt__past--far"><img loading="lazy" decoding="async" src="/assets/avatars/marcus.jpg" alt="" width="22" height="22"><span>Ran a sanctions rescreen</span><small>3h &middot; Marcus</small></div>
+              <div class="bt__past"><img loading="lazy" decoding="async" src="/assets/avatars/priya.jpg" alt="" width="22" height="22"><span>Asked for a periodic review</span><small>14m &middot; Priya</small></div>
+              <div class="bt__win">
+                <div class="bt__bar"><i></i><i></i><i></i><span class="sk" style="width:38%"></span></div>
+                <p class="bt__name"><span class="vb vb--purple"></span>KYC Review Agent</p>
+                <p class="bt__label">Connections</p>
+                <ul class="bt__conns">
+                  <li><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="" width="16" height="16"><span class="sk"></span></li>
+                  <li><img loading="lazy" decoding="async" src="/assets/logos/complyadvantage.jpg" alt="" width="16" height="16"><span class="sk"></span></li>
+                  <li><img loading="lazy" decoding="async" src="/assets/logos/googledrive.svg" alt="" width="16" height="16"><span class="sk"></span></li>
+                  <li><i class="bt__dot"></i><span class="sk"></span></li>
+                </ul>
+                <p class="bt__label">Rules</p>
+                <span class="sk" style="width:80%"></span><span class="sk" style="width:55%"></span>
+              </div>
+            </div>
+            <div class="bt__chip"><span class="bt__avs"><img loading="lazy" decoding="async" src="/assets/avatars/tom.jpg" alt="" width="22" height="22"><img loading="lazy" decoding="async" src="/assets/avatars/lena.jpg" alt="" width="22" height="22"><img loading="lazy" decoding="async" src="/assets/avatars/mei.jpg" alt="" width="22" height="22"></span>Shared with 12 reviewers</div>
+          </div>
+          <p class="gb__cap"><b>Set up once, used by everyone</b> An author publishes the procedure; reviewers, auditors and admins each work with it from their own role.</p>
+        </article>
+
+        <article class="gb__item">
+          <div class="gb__card gbc-roles" data-gb="roles" aria-hidden="true">
+            <ul class="rl">
+              <li class="rl__item is-active" data-role>
+                <div class="rl__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/></svg><span class="rl__name">Admin</span><span class="rl__x">&times;</span><span class="rl__plus">+</span></div>
+                <div class="rl__body"><div><p>Runs the workspace: people, tools and access.</p><ul><li>Manage members and roles</li><li>Connect tools and manage secrets</li><li>See every run and decision</li></ul></div></div>
+              </li>
+              <li class="rl__item" data-role>
+                <div class="rl__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg><span class="rl__name">Author</span><span class="rl__x">&times;</span><span class="rl__plus">+</span></div>
+                <div class="rl__body"><div><p>Writes and tests procedures.</p><ul><li>Write and upload procedures</li><li>Run evals in sandbox</li><li>Publish new versions</li></ul></div></div>
+              </li>
+              <li class="rl__item" data-role>
+                <div class="rl__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg><span class="rl__name">Reviewer</span><span class="rl__x">&times;</span><span class="rl__plus">+</span></div>
+                <div class="rl__body"><div><p>Decides on paused runs.</p><ul><li>Work the review queue</li><li>Approve or escalate paused runs</li><li>Add a reason to every decision</li></ul></div></div>
+              </li>
+              <li class="rl__item" data-role>
+                <div class="rl__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="rl__name">Auditor</span><span class="rl__x">&times;</span><span class="rl__plus">+</span></div>
+                <div class="rl__body"><div><p>Has read-only access to the workspace.</p><ul><li>Read every run, version and decision</li><li>Verify the audit log</li><li>Change nothing</li></ul></div></div>
+              </li>
+            </ul>
+          </div>
+          <p class="gb__cap"><b>Decide who can do what</b> Authors write, reviewers decide and auditors only read, with roles set for each workspace.</p>
+        </article>
+
+        <article class="gb__item">
+          <div class="gb__card gbc-orbit" data-gb="orbit" aria-hidden="true">
+            <svg viewBox="0 0 400 390" preserveAspectRatio="xMidYMid meet" focusable="false">
+              <defs>
+                <radialGradient id="orb-glow"><stop offset="0" stop-color="#8b6bf0" stop-opacity=".45"/><stop offset="1" stop-color="#8b6bf0" stop-opacity="0"/></radialGradient>
+                <marker id="orb-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 2l4 3-4 3" fill="none" stroke="#9a9ca6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
+              </defs>
+              <circle cx="200" cy="195" r="170" fill="none" stroke="#e4e4ea"/>
+              <circle cx="200" cy="195" r="125" fill="none" stroke="#d6d6de"/>
+              <circle cx="200" cy="195" r="85" fill="none" stroke="#e4e4ea"/>
+              <circle cx="200" cy="195" r="50" fill="none" stroke="#ececf1"/>
+              <path d="M230.2 73.7A125 125 0 0 1 320.2 229.5" fill="none" stroke="#9a9ca6" stroke-width="1.2" marker-end="url(#orb-arrow)"/>
+              <path d="M289.9 281.8A125 125 0 0 1 110.1 281.8" fill="none" stroke="#9a9ca6" stroke-width="1.2" marker-end="url(#orb-arrow)"/>
+              <path d="M79.8 229.5A125 125 0 0 1 169.8 73.7" fill="none" stroke="#9a9ca6" stroke-width="1.2" marker-end="url(#orb-arrow)"/>
+              <g class="orb__label" fill="#8a8c95" font-size="12" text-anchor="middle">
+                <text x="200" y="46">Run</text>
+                <text transform="translate(330 288) rotate(-60)">Review</text>
+                <text transform="translate(70 288) rotate(60)">Evaluate</text>
+              </g>
+              <g class="orb__node is-active" data-orb transform="translate(200 70)"><circle class="orb__halo" r="30" fill="url(#orb-glow)"/><circle r="14" fill="#fff" stroke="#d6d6de"/><circle class="orb__spin" r="8" fill="none" stroke="#7a4bd8" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 40"/><circle class="orb__dot" r="3" fill="#b4b6bf"/></g>
+              <g class="orb__node" data-orb transform="translate(308.3 257.5)"><circle class="orb__halo" r="30" fill="url(#orb-glow)"/><circle r="14" fill="#fff" stroke="#d6d6de"/><circle class="orb__spin" r="8" fill="none" stroke="#7a4bd8" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 40"/><circle class="orb__dot" r="3" fill="#b4b6bf"/></g>
+              <g class="orb__node" data-orb transform="translate(91.7 257.5)"><circle class="orb__halo" r="30" fill="url(#orb-glow)"/><circle r="14" fill="#fff" stroke="#d6d6de"/><circle class="orb__spin" r="8" fill="none" stroke="#7a4bd8" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 40"/><circle class="orb__dot" r="3" fill="#b4b6bf"/></g>
+              <g transform="translate(200 195)"><circle r="30" fill="#fff" stroke="#e4e4ea"/><rect x="-14" y="-14" width="28" height="28" rx="8" fill="#111214"/><path d="M-5-5l5 9 5-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+            </svg>
+          </div>
+          <p class="gb__cap"><b>Checked on every version</b> Evals test each new version against real runs, and a failing scenario blocks publishing.</p>
+        </article>
+
+        <article class="gb__item">
+          <div class="gb__card gbc-trig" data-gb="trigger" aria-hidden="true">
+            <div class="tg">
+              <p class="tg__line tg__step" data-step><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="" width="16" height="16"><span>Sumsub &middot; applicantReviewed &middot; Halden Trading</span></p>
+              <p class="tg__agent tg__step" data-step><span class="vb vb--blue"></span>KYC Review Agent</p>
+              <div class="tg__card tg__step" data-step>
+                <p class="tg__type" data-step><b>Approved:</b></p>
+                <ol>
+                  <li class="tg__type" data-step><b>ID and proof of address</b> verified</li>
+                  <li class="tg__type" data-step><b>No screening hits</b> in ComplyAdvantage</li>
+                  <li class="tg__type" data-step>Risk <b>Medium</b>, no review needed</li>
+                </ol>
+              </div>
+              <p class="tg__foot tg__step" data-step><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="" width="14" height="14"><img loading="lazy" decoding="async" src="/assets/logos/complyadvantage.jpg" alt="" width="14" height="14"><span>Finished in 38s using Sumsub and ComplyAdvantage</span></p>
+            </div>
+            <span class="gb__tag gb__tag--end">Sample data</span>
+          </div>
+          <p class="gb__cap"><b>Starts when the work arrives</b> Runs start from a webhook or a schedule, so a new case or a due review doesn't sit in someone's inbox.</p>
+        </article>
+
+        <article class="gb__item">
+          <div class="gb__card gbc-std" data-gb="standard" aria-hidden="true">
+            <i class="sq-g" style="left:12%;top:18%"></i><i class="sq-g sq-g--sm" style="left:78%;top:12%"></i><i class="sq-g" style="left:66%;top:34%"></i><i class="sq-g sq-g--sm" style="left:30%;top:46%"></i><i class="sq-g" style="left:88%;top:58%"></i><i class="sq-g sq-g--sm" style="left:8%;top:70%"></i>
+            <span class="std__line"></span>
+            <div class="std__flag">
+              <p><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></svg>Flag</p>
+              <p>Sanctions scenario failed on v1.4 draft. <b>Publishing blocked.</b></p>
+            </div>
+          </div>
+          <p class="gb__cap"><b>Tests you write</b> Write scenarios for the cases you care about. Each new version runs them, and a failure stops the draft going live.</p>
+        </article>
+
+        <article class="gb__item">
+          <div class="gb__card gbc-globe" data-gb="globe" aria-hidden="true">
+            <svg viewBox="0 0 400 390" preserveAspectRatio="xMidYMid meet" focusable="false">
+              <defs>
+                <clipPath id="gl-clip"><circle cx="200" cy="195" r="150"/></clipPath>
+                <radialGradient id="gl-fill" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f1f1f5"/></radialGradient>
+                <clipPath id="gl-c1"><circle r="12"/></clipPath>
+              </defs>
+              <circle cx="200" cy="195" r="150" fill="url(#gl-fill)" stroke="#e1e1e8"/>
+              <g fill="none" stroke="#e1e1e8" stroke-width="1" clip-path="url(#gl-clip)">
+                <g class="gl__mer"><ellipse cx="200" cy="195" rx="150" ry="150" style="animation-delay:0s"/><ellipse cx="200" cy="195" rx="150" ry="150" style="animation-delay:-8s"/><ellipse cx="200" cy="195" rx="150" ry="150" style="animation-delay:-16s"/><ellipse cx="200" cy="195" rx="150" ry="150" style="animation-delay:-24s"/><ellipse cx="200" cy="195" rx="150" ry="150" style="animation-delay:-32s"/><ellipse cx="200" cy="195" rx="150" ry="150" style="animation-delay:-40s"/></g>
+                <ellipse cx="200" cy="195" rx="150" ry="51"/>
+                <ellipse cx="200" cy="124.5" rx="130" ry="44"/><ellipse cx="200" cy="265.5" rx="130" ry="44"/>
+                <ellipse cx="200" cy="73" rx="75" ry="26"/><ellipse cx="200" cy="317" rx="75" ry="26"/>
+                <g class="gl__arcs" fill="none" stroke-width="1.3"><ellipse cx="200" cy="195" rx="165" ry="70" stroke="#ee7fb0" transform="rotate(-28 200 195)"/><ellipse cx="200" cy="195" rx="150" ry="95" stroke="#a99af0" transform="rotate(38 200 195)"/></g>
+              </g>
+              <g data-node><circle cx="122" cy="130" r="14" fill="#fff" stroke="#e1e1e8"/><image href="/assets/logos/sumsub.png" x="114" y="122" width="16" height="16" clip-path="inset(0 round 4px)"/></g>
+              <g><circle cx="288" cy="118" r="14" fill="#fff" stroke="#e1e1e8"/><image href="/assets/logos/complyadvantage.jpg" x="280" y="110" width="16" height="16" clip-path="inset(0 round 4px)"/></g>
+              <g><circle cx="312" cy="238" r="14" fill="#fff" stroke="#e1e1e8"/><image href="/assets/logos/googledrive.svg" x="304" y="230" width="16" height="16"/></g>
+              <g><circle cx="102" cy="252" r="14" fill="#fff" stroke="#e1e1e8"/><image href="/assets/logos/slack.svg" x="94" y="244" width="16" height="16"/></g>
+              <g><circle cx="222" cy="318" r="14" fill="#fff" stroke="#e1e1e8"/><image href="/assets/logos/gmail.svg" x="214" y="311" width="16" height="14"/></g>
+              <g transform="translate(200 195)"><circle r="26" fill="#111214"/><path d="M-8-7l8 14 8-14" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+            </svg>
+          </div>
+          <p class="gb__cap"><b>Connected to your tools</b> Sumsub, ComplyAdvantage and Google Drive today. Slack and email review requests <span class="tag-soon">Coming soon</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="oversight" class="section wrap" aria-labelledby="oversight-title">
+      <div data-strip data-insights>
+        <div class="ov__head" data-reveal>
+          <div class="section__head">
+            <p class="eyebrow">Oversight</p>
+            <h2 id="oversight-title">How your procedures are performing</h2>
+            <p>See how each version performs, where runs pause and which checks fail, across every procedure.</p>
+            <p class="ov__sample">Sample data</p>
+          </div>
+          <div class="ov__nav"><button type="button" class="ov__btn" data-prev aria-label="Previous cards">&larr;</button><button type="button" class="ov__btn" data-next aria-label="Next cards">&rarr;</button></div>
+        </div>
+        <ul class="strip scroll-x" data-track tabindex="0" aria-label="Oversight cards (sample data)">
+          <li class="ovc">
+            <h3>Runs per procedure</h3>
+            <p class="ovc__q">Which procedures run the most?</p>
+            <p class="ovc__big"><b>3,214</b><small class="up">+9%</small></p>
+            <ul class="ovl">
+              <li><span class="ovl__chip" style="--c:#2f9bf0"><svg class="ico" aria-hidden="true"><use href="#i-kyc"/></svg></span>KYC Review Agent<i class="ovl__bar"><i class="ov-grow" style="--w:100%"></i></i><span class="ovl__n">1,204</span></li>
+              <li><span class="ovl__chip" style="--c:#7a4bd8"><svg class="ico" aria-hidden="true"><use href="#i-sanctions"/></svg></span>Sanctions Screening<i class="ovl__bar"><i class="ov-grow" style="--w:75%"></i></i><span class="ovl__n">902</span></li>
+              <li><span class="ovl__chip" style="--c:#3fb36b"><svg class="ico" aria-hidden="true"><use href="#i-periodic"/></svg></span>Periodic Review<i class="ovl__bar"><i class="ov-grow" style="--w:51%"></i></i><span class="ovl__n">611</span></li>
+              <li><span class="ovl__chip" style="--c:#e8912d"><svg class="ico" aria-hidden="true"><use href="#i-vendor"/></svg></span>Vendor Onboarding<i class="ovl__bar"><i class="ov-grow" style="--w:28%"></i></i><span class="ovl__n">342</span></li>
+              <li><span class="ovl__chip" style="--c:#d6453d"><svg class="ico" aria-hidden="true"><use href="#i-fraud"/></svg></span>Fraud Triage<i class="ovl__bar"><i class="ov-grow" style="--w:13%"></i></i><span class="ovl__n">155</span></li>
+            </ul>
+          </li>
+          <li class="ovc">
+            <h3>Outcomes by kind of work</h3>
+            <p class="ovc__q">How do runs finish?</p>
+            <p class="ovc__big"><b>88%</b><small class="up">+3%</small></p>
+            <table class="ovt">
+              <thead><tr><th scope="col">Kind of work</th><th scope="col" class="ovt__hl">Completed</th><th scope="col">Sent to review</th><th scope="col">Stopped</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">KYC</th><td class="ovt__hl g">91%</td><td class="o">7%</td><td class="r">2%</td></tr>
+                <tr><th scope="row">Sanctions</th><td class="ovt__hl g">84%</td><td class="o">12%</td><td class="r">4%</td></tr>
+                <tr><th scope="row">Vendor</th><td class="ovt__hl g">88%</td><td class="o">10%</td><td class="r">2%</td></tr>
+                <tr><th scope="row">Periodic</th><td class="ovt__hl g">93%</td><td class="o">6%</td><td class="r">1%</td></tr>
+                <tr><th scope="row">Fraud</th><td class="ovt__hl g">72%</td><td class="o">19%</td><td class="r">9%</td></tr>
+              </tbody>
+            </table>
+          </li>
+          <li class="ovc">
+            <h3>Where runs come from</h3>
+            <p class="ovc__q">What starts your runs?</p>
+            <p class="ovc__big"><b>4.1K</b><small class="up">+18%</small></p>
+            <div class="ovs" aria-hidden="true">
+              <div class="ovs__col"><i class="ov-rise" style="--h:46%;--c:#cfe3fb"></i><i class="ov-rise" style="--h:24%;--c:#7db3ef"></i><i class="ov-rise" style="--h:14%;--c:#2f6fd0"></i><i class="ov-rise" style="--h:6%;--c:#143e7a"></i></div>
+              <div class="ovs__col"><i class="ov-rise" style="--h:52%;--c:#cfe3fb"></i><i class="ov-rise" style="--h:26%;--c:#7db3ef"></i><i class="ov-rise" style="--h:16%;--c:#2f6fd0"></i><i class="ov-rise" style="--h:6%;--c:#143e7a"></i></div>
+              <div class="ovs__col"><i class="ov-rise" style="--h:40%;--c:#cfe3fb"></i><i class="ov-rise" style="--h:30%;--c:#7db3ef"></i><i class="ov-rise" style="--h:12%;--c:#2f6fd0"></i><i class="ov-rise" style="--h:8%;--c:#143e7a"></i></div>
+              <div class="ovs__col"><i class="ov-rise" style="--h:58%;--c:#cfe3fb"></i><i class="ov-rise" style="--h:28%;--c:#7db3ef"></i><i class="ov-rise" style="--h:18%;--c:#2f6fd0"></i><i class="ov-rise" style="--h:7%;--c:#143e7a"></i></div>
+              <div class="ovs__col"><i class="ov-rise" style="--h:50%;--c:#cfe3fb"></i><i class="ov-rise" style="--h:34%;--c:#7db3ef"></i><i class="ov-rise" style="--h:14%;--c:#2f6fd0"></i><i class="ov-rise" style="--h:9%;--c:#143e7a"></i></div>
+              <div class="ovs__col"><i class="ov-rise" style="--h:66%;--c:#cfe3fb"></i><i class="ov-rise" style="--h:32%;--c:#7db3ef"></i><i class="ov-rise" style="--h:20%;--c:#2f6fd0"></i><i class="ov-rise" style="--h:8%;--c:#143e7a"></i></div>
+            </div>
+            <ul class="ovk">
+              <li><i style="background:#cfe3fb"></i><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="" width="16" height="16">Sumsub events <b>157</b></li>
+              <li><i style="background:#7db3ef"></i><svg class="ico" aria-hidden="true"><use href="#i-webhook"/></svg>Webhooks <b>103</b></li>
+              <li><i style="background:#2f6fd0"></i><svg class="ico" aria-hidden="true"><use href="#i-schedule"/></svg>Schedule <b>45</b></li>
+              <li><i style="background:#143e7a"></i><svg class="ico" aria-hidden="true"><use href="#i-hand"/></svg>Manual <b>21</b></li>
+            </ul>
+          </li>
+          <li class="ovc">
+            <h3>Eval results by version</h3>
+            <p class="ovc__q">How are live versions doing on their evals?</p>
+            <div class="ovg">
+              <svg viewBox="0 0 260 150" role="img" aria-label="Gauge: 46 of 50 versions passing, 3 with warnings, 1 failing">
+                <g class="ov-sweep">
+                  <path d="M 20 140 A 110 110 0 0 1 240 140" pathLength="100" fill="none" stroke="#3fb36b" stroke-width="22" stroke-dasharray="91 100"/>
+                  <path d="M 20 140 A 110 110 0 0 1 240 140" pathLength="100" fill="none" stroke="#f1b43a" stroke-width="22" stroke-dasharray="0 92 5 100"/>
+                  <path d="M 20 140 A 110 110 0 0 1 240 140" pathLength="100" fill="none" stroke="#e5675f" stroke-width="22" stroke-dasharray="0 98 2 100"/>
+                </g>
+              </svg>
+              <p class="ovg__v"><b>92%</b><span>46 of 50 versions</span></p>
+            </div>
+            <ul class="ovk ovk--row">
+              <li><i style="background:#3fb36b"></i>Passing <b>46</b></li>
+              <li><i style="background:#f1b43a"></i>Warnings <b>3</b></li>
+              <li><i style="background:#e5675f"></i>Failing <b>1</b></li>
+            </ul>
+          </li>
+          <li class="ovc">
+            <h3>Checks that fail most</h3>
+            <p class="ovc__q">Where do runs get stuck?</p>
+            <p class="ovc__big"><b>96</b><small class="up">-5%</small></p>
+            <div class="ovseg" aria-hidden="true"><i class="ov-grow" style="--w:32%;--c:#d6453d"></i><i class="ov-grow" style="--w:25%;--c:#e8912d"></i><i class="ov-grow" style="--w:19%;--c:#7a4bd8"></i><i class="ov-grow" style="--w:15%;--c:#2f9bf0"></i><i class="ov-grow" style="--w:9%;--c:#3fb36b"></i></div>
+            <ul class="ovl ovl--plain">
+              <li><i class="ovl__dot" style="background:#d6453d"></i>Proof of address too old<span class="ovl__n">31 fails</span></li>
+              <li><i class="ovl__dot" style="background:#e8912d"></i>Name mismatch on ID<span class="ovl__n">24 fails</span></li>
+              <li><i class="ovl__dot" style="background:#7a4bd8"></i>PEP hit needs review<span class="ovl__n">18 fails</span></li>
+              <li><i class="ovl__dot" style="background:#2f9bf0"></i>Document expired<span class="ovl__n">14 fails</span></li>
+              <li><i class="ovl__dot" style="background:#3fb36b"></i>Selfie did not match<span class="ovl__n">9 fails</span></li>
+            </ul>
+          </li>
+          <li class="ovc">
+            <h3>Review load</h3>
+            <p class="ovc__q">Who is carrying the most reviews?</p>
+            <p class="ovc__big"><b>148</b><small class="up">+6%</small></p>
+            <ul class="ovb">
+              <li><i class="ov-rise" style="--h:100%"><span class="ovb__v">38</span></i><img loading="lazy" decoding="async" src="/assets/avatars/tom.jpg" alt="Tom" width="28" height="28"></li>
+              <li><i class="ov-rise" style="--h:82%"><span class="ovb__v">31</span></i><img loading="lazy" decoding="async" src="/assets/avatars/priya.jpg" alt="Priya" width="28" height="28"></li>
+              <li><i class="ov-rise" style="--h:71%"><span class="ovb__v">27</span></i><img loading="lazy" decoding="async" src="/assets/avatars/lena.jpg" alt="Lena" width="28" height="28"></li>
+              <li><i class="ov-rise" style="--h:58%"><span class="ovb__v">22</span></i><img loading="lazy" decoding="async" src="/assets/avatars/marcus.jpg" alt="Marcus" width="28" height="28"></li>
+              <li><i class="ov-rise" style="--h:47%"><span class="ovb__v">18</span></i><img loading="lazy" decoding="async" src="/assets/avatars/mei.jpg" alt="Maya" width="28" height="28"></li>
+              <li><i class="ov-rise" style="--h:32%"><span class="ovb__v">12</span></i><img loading="lazy" decoding="async" src="/assets/avatars/diego.jpg" alt="Diego" width="28" height="28"></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- chrome:controls -->
+  <section id="controls" class="ctl section" aria-labelledby="controls-title" data-ctl>
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <p class="eyebrow">Controls</p>
+          <h2 id="controls-title">Controls your auditors will ask about</h2>
+        </div>
+        <div class="ctl__top">
+          <article class="ctl-card ctl-card--big" data-ctl-card>
+            <div class="ctl-fig">
+              <div><span>Runs</span><b>3.2k</b></div>
+              <div><span>Sent to review</span><b>6.1%</b></div>
+              <div><span>Oldest waiting</span><b>2h</b></div>
+              <p class="ctl-sample">Sample data</p>
+            </div>
+            <div class="ctl-chart">
+              <svg viewBox="0 0 640 210" role="img" aria-label="Line chart, sample data: this month's review rate rising above the target, compared with last month">
+                <line class="ctl-target" x1="20" y1="100" x2="560" y2="100"/>
+                <text x="566" y="104" class="ctl-tx">Target</text>
+                <path class="ctl-line ctl-line--old" pathLength="1" d="M 40 160 L 185 150 L 330 140 L 475 128 L 600 118"/>
+                <path class="ctl-line ctl-line--new" pathLength="1" d="M 40 150 L 185 128 L 330 112 L 475 80 L 600 52"/>
+                <g class="ctl-dots"><circle cx="40" cy="150" r="4"/><circle cx="185" cy="128" r="4"/><circle cx="330" cy="112" r="4"/><circle cx="475" cy="80" r="4"/><circle cx="600" cy="52" r="4"/></g>
+                <text x="600" y="38" text-anchor="end" class="ctl-tx ctl-tx--pink">This month</text>
+                <text x="600" y="136" text-anchor="end" class="ctl-tx">Last month</text>
+                <g class="ctl-months"><text x="40" y="200">Jan</text><text x="185" y="200">Feb</text><text x="330" y="200">Mar</text><text x="475" y="200">Apr</text><text x="600" y="200">May</text></g>
+              </svg>
+              <div class="ctl-tip"><b><span aria-hidden="true">&#9888;</span> Above target</b><span>Review rate up</span></div>
+            </div>
+            <h3 class="ctl-cap"><b>Review monitoring</b> <span>Track runs, review rate and wait times for each procedure.</span></h3>
+          </article>
+          <div class="ctl__side">
+            <article class="ctl-card ctl-card--row" data-ctl-card>
+              <div class="ctl-card__txt"><h3>Audit logging</h3><p>Every action is written to a hash-chained log you can verify.</p></div>
+              <div class="ctl-log">
+                <p class="ctl-log__head"><span class="ctl-spin" aria-hidden="true"></span>Capturing.</p>
+                <ul>
+                  <li>Tom approved Corvid Freight</li>
+                  <li>Maya published KYC Review v1.3</li>
+                  <li>Priya rotated the Sumsub key</li>
+                  <li>Lena exported the audit log</li>
+                </ul>
+              </div>
+            </article>
+            <article class="ctl-card ctl-card--row" data-ctl-card>
+              <div class="ctl-card__txt"><h3>Versioned specs</h3><p>Each run records the exact version it followed; old versions stay readable.</p></div>
+              <div class="ctl-ver" role="img" aria-label="Versions v1.1, v1.2 and v1.3, with v1.3 published">
+                <span>v1.1</span><span>v1.2</span><span class="is-pub">v1.3<i>Published</i></span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <ul class="ctl__grid">
+          <li class="ctl-item">
+            <div class="ctl-vis"><div class="ctl-role"><p>Admin <span class="ctl-av"><img src="/assets/avatars/tom.jpg" alt="" width="18" height="18" loading="lazy" decoding="async"><img src="/assets/avatars/priya.jpg" alt="" width="18" height="18" loading="lazy" decoding="async"><img src="/assets/avatars/lena.jpg" alt="" width="18" height="18" loading="lazy" decoding="async"></span></p><ul><li><img src="/assets/logos/sumsub.png" alt="" width="14" height="14" loading="lazy" decoding="async">Sumsub</li><li><img src="/assets/logos/complyadvantage.jpg" alt="" width="14" height="14" loading="lazy" decoding="async">ComplyAdvantage</li><li><img src="/assets/logos/googledrive.svg" alt="" width="14" height="14" loading="lazy" decoding="async">Google Drive</li></ul></div></div>
+            <p class="ctl-cap"><b>Roles and permissions.</b> Admin, Author, Reviewer and Auditor roles, scoped to each workspace.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><span class="ctl-ring"><svg class="ico" aria-hidden="true"><use href="#i-sanctions"/></svg></span></div>
+            <p class="ctl-cap"><b>Hash-chained log.</b> Each entry carries the hash of the one before it. Verifying the log recomputes the chain and flags entries that no longer match.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><ul class="ctl-rules"><li><code>risk == "High"</code><em class="y"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">routes to review</span></em></li><li><code>hits &gt; 0</code><em class="y"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">routes to review</span></em></li><li><code>risk == "Low"</code><em class="n"><span aria-hidden="true">&#10005;</span><span class="visually-hidden">does not route to review</span></em></li></ul></div>
+            <p class="ctl-cap"><b>Rule-based branches.</b> CEL rules you write pick the branch each run takes.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><span class="ctl-ring ctl-ring--stars"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg></span></div>
+            <p class="ctl-cap"><b>Sandbox before live.</b> New versions run on test data first. Going live is a separate step.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><ul class="ctl-rules"><li>KYC high risk<em class="y"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">passed</span></em></li><li>Sanctions match<em class="y"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">passed</span></em></li><li>Expired document<em class="n"><span aria-hidden="true">&#10005;</span><span class="visually-hidden">failed</span></em></li></ul></div>
+            <p class="ctl-cap"><b>Evals before publish.</b> A failing scenario blocks publishing until it is fixed.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><span class="ctl-mask"><span aria-hidden="true">* * * * * * * *</span><span class="visually-hidden">Masked secret</span></span></div>
+            <p class="ctl-cap"><b>Secrets in a vault.</b> Steps point to a vault path, and the key stays in the vault.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><div class="ctl-sig"><ul class="ctl-rules ctl-rules--lit"><li>Signed delivery<em class="y"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">accepted</span></em></li><li>Unsigned delivery<em class="n"><span aria-hidden="true">&#10005;</span><span class="visually-hidden">rejected</span></em></li></ul><q>Reject stale or unsigned</q></div></div>
+            <p class="ctl-cap"><b>Signed webhook triggers.</b> Unsigned or stale deliveries are rejected before a run starts.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><div class="ctl-trace"><span class="ctl-trace__by"><span>By Maya</span><span>v1.3</span></span><span class="ctl-trace__pill"><img src="/assets/logos/sumsub.png" alt="" width="14" height="14" loading="lazy" decoding="async"><b>Sumsub</b> Fetch applicant</span><span class="ctl-trace__by"><span>Via KYC Review</span><span>Executed</span></span></div></div>
+            <p class="ctl-cap"><b>Step tracing.</b> Trace every step a run takes, with who started it and what it called.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><div class="ctl-bars" role="img" aria-label="Bars for Q1 to Q3, sample data"><span><i class="ctl-b" style="--h:30%"></i>Q1</span><span><i class="ctl-b ctl-b--hot" style="--h:70%"></i>Q2</span><span><i class="ctl-b" style="--h:100%"></i>Q3</span></div></div>
+            <p class="ctl-cap"><b>Reporting.</b> See runs, outcomes and review times by procedure.</p>
+          </li>
+          <li class="ctl-item">
+            <div class="ctl-vis"><div class="ctl-req"><p><b>Escalation</b></p><p>Harbor Lane PEP hit. Approve?</p><p class="ctl-req__act"><span>Deny</span><span class="is-ok">Approve</span></p></div></div>
+            <p class="ctl-cap"><b>Review approvals.</b> Runs pause for a named reviewer, and the decision is logged.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  <!-- /chrome:controls -->
+
+    <section id="rules" class="section wrap" aria-labelledby="rules-title">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Deterministic</p>
+        <h2 id="rules-title">Your rules choose the branch</h2>
+        <p>The model reads documents and drafts notes. Rules written in CEL decide the branch, so the same input always takes the same path.</p>
+      </div>
+      <div class="router" data-router data-reveal>
+        <svg class="router__links" aria-hidden="true" focusable="false"><path class="router__in" d=""/><path class="router__out" d=""/></svg>
+        <span class="router__sample">Sample data</span>
+        <div class="router__win">
+          <ul class="router__inputs" aria-label="Example inputs">
+            <li data-to="Ask a reviewer" class="is-active">&ldquo;risk High &middot; 0 hits&rdquo;</li>
+            <li data-to="Ask a reviewer">&ldquo;risk Medium &middot; 1 hit&rdquo;</li>
+            <li data-to="Approve">&ldquo;risk Medium &middot; 0 hits&rdquo;</li>
+            <li data-to="Approve">&ldquo;risk Low &middot; 0 hits&rdquo;</li>
+            <li data-to="Escalate">&ldquo;PEP match &middot; score 0.82&rdquo;</li>
+            <li data-to="Request documents">&ldquo;documents missing&rdquo;</li>
+            <li data-to="Stop the run">&ldquo;sanctions match &middot; confirmed&rdquo;</li>
+          </ul>
+        </div>
+        <div class="router__mid"><span class="router__pill"><span class="router__glyph" aria-hidden="true">{}</span>CEL rules</span></div>
+        <ul class="router__branches" aria-label="Branches">
+          <li data-branch="Approve"><i style="background:#3fb36b"></i>Approve</li>
+          <li data-branch="Ask a reviewer" class="is-active"><i style="background:#7a4bd8"></i>Ask a reviewer</li>
+          <li data-branch="Stop the run"><i style="background:#d6453d"></i>Stop the run</li>
+          <li data-branch="Escalate"><i style="background:#e8912d"></i>Escalate</li>
+          <li data-branch="Request documents"><i style="background:#2f9bf0"></i>Request documents</li>
+        </ul>
+      </div>
+      <p class="router__rule">One of the rules: <code>risk_rating == "High" || screening.hits &gt; 0</code> sends the run to a reviewer.</p>
+    </section>
+
+    <section id="integrations" class="section wrap" aria-labelledby="integrations-title">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Integrations</p>
+        <h2 id="integrations-title">Connects to your KYC and screening tools</h2>
+        <p>Bring in the systems your procedures already rely on. Anything with an API can be added as a custom REST connection.</p>
+      </div>
+      <ul class="integrations" data-reveal>
+        <li><span class="lgtile"><img loading="lazy" decoding="async" src="/assets/logos/sumsub.png" alt="" width="28" height="28"></span><div><h3><a href="/integrations/sumsub/">Sumsub</a></h3><p>KYC and applicant data</p></div></li>
+        <li><span class="lgtile"><img loading="lazy" decoding="async" src="/assets/logos/complyadvantage.jpg" alt="" width="28" height="28"></span><div><h3><a href="/integrations/complyadvantage/">ComplyAdvantage</a></h3><p>Sanctions, PEP and adverse media screening</p></div></li>
+        <li><span class="lgtile"><img loading="lazy" decoding="async" src="/assets/logos/googledrive.svg" alt="" width="28" height="28"></span><div><h3>Google Drive</h3><p>Procedure documents and evidence folders</p></div></li>
+        <li><span class="lgtile"><img loading="lazy" decoding="async" src="/assets/logos/veriff.png" alt="" width="28" height="28"></span><div><h3>Veriff <span class="tag-soon">Coming soon</span></h3><p>Identity verification</p></div></li>
+        <li><span class="lgtile"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 5l-4 14"/></svg></span><div><h3>Custom REST</h3><p>Any system with an API</p></div></li>
+      </ul>
+    </section>
+
+    <section id="shipped" class="section wrap" aria-labelledby="shipped-title">
+      <div data-strip>
+        <div class="ship__head" data-reveal>
+          <div class="section__head">
+            <p class="eyebrow">What's new</p>
+            <h2 id="shipped-title">Recently shipped</h2>
+          </div>
+          <div class="strip__nav"><button type="button" class="btn btn--ghost btn--round" data-prev aria-label="Previous shipped items">←</button><button type="button" class="btn btn--ghost btn--round" data-next aria-label="Next shipped items">→</button></div>
+        </div>
+        <ul class="strip scroll-x" data-track tabindex="0" aria-label="Recently shipped">
+          <li class="ship"><h3>Runs that pause for review</h3><p>Published versions run step by step, stop where the rules say a person decides, and resume on the decision.</p><time datetime="2026-11-01">Nov 2026</time></li>
+          <li class="ship"><h3>Compile from a procedure</h3><p>Upload a procedure and Verkflo turns it into steps and test scenarios.</p><time datetime="2026-11-01">Nov 2026</time></li>
+          <li class="ship"><h3>Evals on real runs</h3><p>Scenario checks now run against real runs as well as test data.</p><time datetime="2026-11-01">Nov 2026</time></li>
+          <li class="ship"><h3>Connections at run time</h3><p>Steps call Sumsub, ComplyAdvantage and REST APIs with secrets pulled from the vault.</p><time datetime="2026-11-01">Nov 2026</time></li>
+          <li class="ship"><h3>Live compile progress</h3><p>Watch a procedure compile, and see what blocks publishing before you try.</p><time datetime="2026-11-01">Nov 2026</time></li>
+          <li class="ship"><h3>Audit log verification</h3><p>Recompute the hash chain and flag any entry that no longer matches.</p><time datetime="2026-11-01">Nov 2026</time></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="cta" class="cta section wrap" aria-labelledby="cta-title">
+      <div class="cta__box" data-reveal>
+        <p class="shapes" aria-hidden="true"><i class="shape shape--blue"></i><i class="shape shape--teal"></i><i class="shape shape--amber"></i><i class="shape shape--slate"></i></p>
+        <h2 id="cta-title">Build your first<br>agent workflow</h2>
+        <p>Bring a procedure you already follow. We'll turn it into a run you can review.</p>
+        <a class="btn btn--lg" href="/demo/">Book a demo</a>
+      </div>
+    </section>
+  </main>
+  <!-- chrome:footer -->
+  <footer class="footer">
+    <div class="wrap">
+      <nav class="footer__cols" aria-label="Footer">
+        <div><h3>Product</h3><ul><li><a href="/#build">Build</a></li><li><a href="/#review">How runs work</a></li><li><a href="/#integrations">Integrations</a></li></ul></div>
+        <div><h3>Solutions</h3><ul><li><a href="/kyc-automation/">KYC automation</a></li><li><a href="/kyb-automation/">KYB automation</a></li><li><a href="/aml-automation/">AML automation</a></li><li><a href="/compliance-operations-automation/">Compliance operations</a></li><li><a href="/banking-operations-automation/">Banking operations</a></li><li><a href="/fintech-operations-automation/">Fintech operations</a></li></ul></div>
+        <div><h3>Use cases</h3><ul><li><a href="/use-cases/">All use cases</a></li><li><a href="/use-cases/kyc-onboarding/">KYC onboarding</a></li><li><a href="/use-cases/sanctions-screening/">Sanctions screening</a></li><li><a href="/use-cases/chargebacks-disputes/">Chargebacks and disputes</a></li></ul></div>
+        <div><h3>Trust</h3><ul><li><a href="/security/">Security</a></li><li><a href="/#controls">Controls</a></li></ul></div>
+        <div><h3>Company</h3><ul><li><a href="/about/">About</a></li><li><a href="/integrations/">Integrations</a></li><li><a href="/demo/">Book a demo</a></li><li><a href="mailto:hello@verkflo.com">Contact</a></li></ul></div>
+      </nav>
+      <div class="footer__bar"><a class="wordmark" href="/" aria-label="Verkflo home"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M7 8l5 9 5-9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Verkflo</span></a><ul class="footer__legal"><li><a href="/terms/">Terms of Use</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/cookies/">Cookie Policy</a></li></ul></div>
+    </div>
+  </footer>
+  <!-- /chrome:footer -->
+</body>
+</html>

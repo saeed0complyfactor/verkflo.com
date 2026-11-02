@@ -1,0 +1,47 @@
+# Verkflo
+
+> Verkflo turns written KYC, KYB, AML and operations procedures into versioned AI agent workflows for compliance teams at banks and fintechs. A run follows a published version of the procedure, pauses for human review where the procedure says so, and is recorded in a hash-chained audit log. Available today: procedure upload and compile, versioned specs, review queue, CEL rule conditions, evals, sandbox and live modes, connections to Sumsub, ComplyAdvantage, Google Drive and custom REST, vault-referenced secrets, signed webhooks and the audit log. Coming soon: the from-scratch workflow builder, Slack, Microsoft Teams, email and SMS review requests, and Veriff. Verkflo is in early access; the site shows sample data only and makes no claims about customers, results or certifications.
+
+## Main pages
+
+- [Home](https://verkflo.com/): What Verkflo is and how a procedure becomes an agent.
+- [Security](https://verkflo.com/security/): How Verkflo keeps AI agent workflows auditable: versioned procedures, human review where your rules say, CEL rules for branches and a hash-chained audit log.
+- [Book a demo](https://verkflo.com/demo/): Book a Verkflo demo with one of your own KYC, KYB, AML or operations procedures. Tell us which one, and we'll walk you through it running as an agent.
+
+## Use cases
+
+- [Use cases](https://verkflo.com/use-cases/): AI agent use cases for banks and fintechs: KYC and KYB reviews, sanctions and PEP screening, alert triage, disputes, credit checks and operations procedures.
+- [KYC onboarding review](https://verkflo.com/use-cases/kyc-onboarding/): KYC onboarding automation for banks and fintechs. An AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends hits to a reviewer.
+- [KYB and beneficial ownership](https://verkflo.com/use-cases/kyb-beneficial-ownership/): Map beneficial owners above your threshold, screen the company and each owner, and send ownership gaps to a reviewer. KYB and UBO verification as an AI agent.
+- [Sanctions screening](https://verkflo.com/use-cases/sanctions-screening/): Screen each new counterparty in ComplyAdvantage before the first payment. Possible matches go to a named reviewer, and the payment hold stays until they decide.
+- [PEP and adverse media review](https://verkflo.com/use-cases/pep-adverse-media/): When ComplyAdvantage returns a PEP or adverse media hit, an AI agent compares it with the customer file, summarizes the articles and briefs a reviewer.
+- [Periodic KYC review](https://verkflo.com/use-cases/periodic-kyc-review/): Periodic KYC review automation on your own cycle: find reviews due by risk rating, refresh and re-screen each file, and show a reviewer what changed.
+- [Transaction monitoring alert triage](https://verkflo.com/use-cases/transaction-monitoring-alert-triage/): Triage transaction monitoring alerts with transactions, profile and past alerts gathered first. Your disposition rules decide which alerts reach an analyst.
+- [Fraud alert triage](https://verkflo.com/use-cases/fraud-alert-triage/): Fraud alert triage automation that pulls device, login and transaction context, applies your rules and gives an analyst a recommendation on each hold.
+- [Chargebacks and disputes](https://verkflo.com/use-cases/chargebacks-disputes/): Card issuers: prepare cardholder disputes with the statement, transaction data and a reason code mapped per your scheme rules, ready for an analyst to approve.
+- [Credit limit increase review](https://verkflo.com/use-cases/credit-limit-increase/): Credit limit increase reviews for card issuers. Account conduct and exposure checks run against your policy, and any decline or exception goes to a person.
+- [Credit file check](https://verkflo.com/use-cases/credit-file-check/): Credit file review before underwriting. An AI agent compares each application with the bureau file and sends differences and thin files to an underwriter.
+- [Loan application completeness](https://verkflo.com/use-cases/loan-application-completeness/): Check loan application completeness before underwriting. An AI agent compares each file with your checklist, flags figures that disagree and drafts requests.
+- [Vendor due diligence](https://verkflo.com/use-cases/vendor-due-diligence/): Vendor due diligence for banks and fintechs: check each supplier's pack against your list, screen the company and its owners, and hold setup until gaps clear.
+- [Complaints triage](https://verkflo.com/use-cases/complaints-triage/): Complaints triage: categorize each complaint against your taxonomy on arrival, note the response date your policy sets and route sensitive cases to a person.
+- [Account closure review](https://verkflo.com/use-cases/account-closure-review/): Account closure review for banks and fintechs. Balances, pending items, holds and open alerts are checked against your list, and exceptions wait for a reviewer.
+
+## Solutions and company
+
+- [About](https://verkflo.com/about/): About Verkflo: how written KYC, AML and operations procedures become versioned AI agents, with review pauses, sandbox testing and a hash-chained audit log.
+- [Integrations](https://verkflo.com/integrations/): Systems Verkflo agents connect to today: Sumsub, ComplyAdvantage, Google Drive and any API through Custom REST. Veriff, Slack and Teams are coming soon.
+- [Sumsub integration](https://verkflo.com/integrations/sumsub/): Connect Sumsub to Verkflo agents: fetch applicant data, risk ratings, KYB company data and AML hits, and start a KYC run from the applicantReviewed webhook.
+- [ComplyAdvantage integration](https://verkflo.com/integrations/complyadvantage/): Connect ComplyAdvantage to Verkflo agents: screen names against sanctions, PEP and adverse media and fetch the listed entry behind each hit for a reviewer.
+- [Solutions](https://verkflo.com/solutions/): Verkflo solutions for banks and fintechs: KYC, KYB and AML automation, compliance operations, and banking and fintech operations run from your procedures.
+- [KYC automation](https://verkflo.com/kyc-automation/): Automate KYC reviews with AI agents that follow your written procedure: onboarding, periodic reviews and screening, with human review and an audit log.
+- [KYB automation](https://verkflo.com/kyb-automation/): Automate KYB reviews with AI agents that follow your procedure: company documents, beneficial owners and screening, with gaps sent to a reviewer and logged.
+- [AML automation](https://verkflo.com/aml-automation/): AML operations automation for banks and fintechs: agents gather the context for sanctions hits, monitoring alerts and fraud alerts, and analysts decide.
+- [Compliance operations automation](https://verkflo.com/compliance-operations-automation/): Automate compliance operations with AI agents that run your written procedures, pause for review where your rules say and record each step in an audit log.
+- [Banking operations automation](https://verkflo.com/banking-operations-automation/): Banking operations automation for card, lending and account teams: agents prepare disputes, credit checks, closures and complaints for your staff to decide.
+- [Fintech operations automation](https://verkflo.com/fintech-operations-automation/): Fintech operations automation for small teams: AI agents run KYC and KYB onboarding, disputes, complaints and vendor reviews from your written procedures.
+
+## Legal
+
+- [Cookie Policy](https://verkflo.com/cookies/): The Verkflo website sets no cookies and uses no analytics, advertising or other tracking technologies, so there is no cookie banner for you to accept.
+- [Privacy Policy](https://verkflo.com/privacy/): How the Verkflo website handles your information: what the demo form sends to Web3Forms and to us, how we use it, how long we keep it and how to reach us.
+- [Terms of Use](https://verkflo.com/terms/): The terms for using the Verkflo website: acceptable use, no professional advice, content provided as is, third-party names and logos, and how to reach us.
