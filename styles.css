@@ -125,7 +125,7 @@ main:focus { outline: none; }
 .nav.is-open .nav__menu { position: absolute; inset: 60px 0 auto; display: grid; gap: 16px; padding: 20px var(--gutter) 24px; background: var(--bg); border-bottom: 1px solid var(--line); }
 html:not(.js) .nav__menu { display: flex; flex-wrap: wrap; gap: 16px; }
 html:not(.js) .nav__toggle { display: none; }
-@media (min-width: 900px) {
+@media (min-width: 1024px) { /* five links + two buttons need the room */
   .nav__toggle { display: none; }
   /* Links centred on the bar, buttons pinned right; the menu layer ignores clicks so the wordmark stays live. */
   .nav__inner { position: relative; }
@@ -1200,3 +1200,20 @@ html:not(.js) .fv-panel[hidden] { display: grid; }
 html:not(.js) .fv-panel + .fv-panel { border-top: 1px solid var(--line); }
 html:not(.js) .fv-panel::before { content: attr(data-title); color: var(--ink-3); font-weight: 500; }
 html:not(.js) .fv-panels { min-height: 0; }
+
+/* ---------- Blog ---------- */
+.blog-feature { grid-template-columns: 1fr; margin-bottom: 12px; }
+.blog-feature .uc-card__title { font-size: 1.5rem; }
+.blog-feature .uc-card__desc { font-size: 1rem; }
+.uc-card__top > span { font-size: .8125rem; color: var(--ink-3); }
+.legal h3 { margin-top: 24px; font-size: 1.0625rem; }
+.legal ol { margin-top: 12px; padding-left: 20px; list-style: decimal; display: grid; gap: 6px; color: var(--ink-2); }
+.legal table { width: 100%; margin-top: 16px; border-collapse: collapse; font-size: .875rem; display: block; overflow-x: auto; }
+.legal th, .legal td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.legal th { color: var(--ink); font-weight: 600; }
+.legal td { color: var(--ink-2); }
+.blog-meta { margin-top: 24px; color: var(--ink-3); font-size: .875rem; }
+.blog-author { display: grid; margin-top: 40px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.blog-author span { color: var(--ink-3); font-size: .875rem; }
+.blog-cta { margin-top: 24px; padding: 24px; border-radius: var(--radius); background: var(--frame); }
+.blog-cta .btn { color: #fff; margin-right: 12px; }

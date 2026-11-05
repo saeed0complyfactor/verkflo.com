@@ -40,6 +40,12 @@
 - [Banking operations automation](https://verkflo.com/banking-operations-automation/): Banking operations automation for card, lending and account teams: agents prepare disputes, credit checks, closures and complaints for your staff to decide.
 - [Fintech operations automation](https://verkflo.com/fintech-operations-automation/): Fintech operations automation for small teams: AI agents run KYC and KYB onboarding, disputes, complaints and vendor reviews from your written procedures.
 
+## Blog
+
+- [Blog](https://verkflo.com/blog/): Guides, research and regulation notes for compliance and operations teams at banks and fintechs.
+- [Sanctions screening: how to review a hit](https://verkflo.com/blog/sanctions-screening/): How sanctions screening works for US banks and fintechs: OFAC lists, the 50 Percent Rule, a six-step review of a potential match, and what enforcement shows.
+- [SR 11-7 rescinded: what SR 26-2 changes for banks](https://verkflo.com/blog/sr-11-7-sr-26-2/): SR 26-2 replaced SR 11-7 and SR 21-8 in April 2026. What the new model risk guidance covers, what it leaves out, and what it means for AI and AML systems.
+
 ## Legal
 
 - [Cookie Policy](https://verkflo.com/cookies/): The Verkflo website sets no cookies and uses no analytics, advertising or other tracking technologies, so there is no cookie banner for you to accept.
