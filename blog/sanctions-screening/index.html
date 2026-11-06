@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=09a7e4b4">
+  <link rel="stylesheet" href="/styles.css?v=d34c474d">
   <script type="module" src="/js/main.js?v=80a5a208"></script>
 </head>
 <body>
@@ -51,21 +51,29 @@
   </header>
   <!-- /chrome:header -->
   <main id="main" tabindex="-1">
-    <article class="legal wrap">
-      <a href="/blog/">Blog</a>
-      <p class="blog-meta">Guides &middot; November 6, 2026 &middot; 7 min read</p>
-      <h1>Sanctions screening: how to review a hit</h1>
-      <p class="legal__date">By Mehak Tariq, CAMS</p>
-      <img class="blog-img" src="/assets/blog/sanctions-screening-split.png" width="1200" height="630" alt="Screening hit checklist: confirm the list, check the nexus, compare identifiers, block or reject, report" fetchpriority="high">
+    <article class="post wrap">
+      <header class="post-hero">
+        <div class="post-hero__text">
+          <p class="post-crumb"><a href="/blog/">Blog</a><span aria-hidden="true">›</span><span>Guides</span></p>
+          <h1>Sanctions screening: how to review a hit</h1>
+          <div class="post-by">
+            <span class="post-by__mark" aria-hidden="true">MT</span>
+            <p><b>Mehak Tariq, <abbr title="Certified Anti-Money Laundering Specialist">CAMS</abbr></b><span>November 6, 2026<i aria-hidden="true">•</i>7 min read</span></p>
+          </div>
+        </div>
+        <img class="blog-img" src="/assets/blog/sanctions-screening-split.png" width="1200" height="630" alt="Screening hit checklist: confirm the list, check the nexus, compare identifiers, block or reject, report" fetchpriority="high">
+      </header>
+      <div class="post-grid">
+        <div class="legal post-body">
 <p>Sanctions screening compares customers, counterparties and transactions against the sanctions lists published by OFAC, the US Treasury's Office of Foreign Assets Control, so that a bank or fintech can block or reject what sanctions prohibit. The stakes are set by how OFAC enforces: its <a href="https://ofac.treasury.gov/media/912981/download?inline">2021 ransomware advisory</a> notes that "OFAC may impose civil penalties for sanctions violations based on strict liability", which means a firm can be liable even when it did not know it was dealing with a sanctioned party.</p>
 <p>This guide covers what screening has to catch, what OFAC expects from a screening program, the six steps OFAC recommends for reviewing a potential match, and what three recent enforcement cases say about where screening fails. It explains public guidance and is not legal advice.</p>
 
-<h2>What screening has to catch</h2>
+<h2 id="what-screening-has-to-catch">What screening has to catch</h2>
 <p>The main list is the Specially Designated Nationals and Blocked Persons List (the SDN List). OFAC also publishes <a href="https://ofac.treasury.gov/other-ofac-sanctions-lists">non-SDN lists</a> with different prohibitions, including the Sectoral Sanctions Identifications (SSI) List, the Foreign Sanctions Evaders (FSE) List and the Non-SDN Menu-Based Sanctions (NS-MBS) List. These are combined in OFAC's Consolidated list. The chart in OFAC's <a href="https://ofac.treasury.gov/faqs/5">FAQ 5</a> puts parties on the SDN List under blocking, while certain activities with parties on some non-SDN lists call for rejecting the transaction instead. The review has to know which list it hit.</p>
 <p>Screening also has to cover programs that target whole jurisdictions or governments. FAQ 5 gives Iran and the Government of Cuba as examples. That means looking at countries and addresses and, for online services, IP locations, which figure in two of the enforcement cases below.</p>
 <p>OFAC's <a href="https://ofac.treasury.gov/media/6186/download">50 Percent Rule</a> adds another layer. Any entity owned "in the aggregate, directly or indirectly, 50 percent or more by one or more blocked persons" is itself blocked, "regardless of whether the entity itself is listed". OFAC's <a href="https://ofac.treasury.gov/faqs/topic/1521">FAQs on the rule</a> add that it "speaks only to ownership and not to control", and that holdings of people blocked under different programs are added together. Screening names alone will not find these entities. You need ownership information from <a href="/use-cases/kyb-beneficial-ownership/">KYB and beneficial ownership checks</a> as well.</p>
 
-<h2>What OFAC expects from a screening program</h2>
+<h2 id="what-ofac-expects-from-a-screening-program">What OFAC expects from a screening program</h2>
 <p>OFAC's <a href="https://ofac.treasury.gov/media/16331/download?inline">Framework for OFAC Compliance Commitments</a> (May 2019) describes a sanctions compliance program in five parts: "(1) management commitment; (2) risk assessment; (3) internal controls; (4) testing and auditing; and (5) training." In the Framework, screening tools come up under internal controls, and testing and auditing checks them. The Framework expects that an organization "has selected and calibrated the solutions in a manner that is appropriate to address the organization's risk profile and compliance needs", and that it "routinely tests the solutions to ensure effectiveness." A program should also be "capable of adjusting rapidly to changes published by OFAC".</p>
 <p>The Framework lists common root causes of violations. One of them is "Sanctions Screening Software or Filter Faults", which covers firms that:</p>
 <ul>
@@ -75,7 +83,7 @@
 </ul>
 <p>OFAC's FAQs do not name a required product or a match threshold. <a href="https://ofac.treasury.gov/faqs/27">FAQ 27</a> calls the question "primarily a question for your regulator" and says an adequate program depends on who your customers are and what business you do, and <a href="https://ofac.treasury.gov/faqs/28">FAQ 28</a> says "The frequency of running an OFAC scan must be guided by your organization's internal policies and procedures."</p>
 
-<h2>How to review a potential match: OFAC's six steps</h2>
+<h2 id="how-to-review-a-potential-match-ofac-s-six-steps">How to review a potential match: OFAC's six steps</h2>
 <p><a href="https://ofac.treasury.gov/faqs/5">OFAC FAQ 5</a>, last updated September 9, 2026, sets out the steps it recommends for deciding whether an alert is a valid match:</p>
 <ol>
 <li>Find out which list the alert hit. Screening tools often include non-OFAC lists, such as the Commerce Department's Entity List. If the hit is on another agency's list, contact that agency; OFAC does not advise on matches unrelated to its sanctions.</li>
@@ -87,7 +95,7 @@
 </ol>
 <p>Two more points from the same FAQ are worth building into procedures. OFAC "does not confirm potential matches or false positives", so the decision is yours to make and document. And organizations "should keep complete, accurate records detailing the steps taken to investigate the potential match and the information relied upon".</p>
 
-<h2>What a disposition record should hold</h2>
+<h2 id="what-a-disposition-record-should-hold">What a disposition record should hold</h2>
 <p>Based on those expectations, a cleared or escalated alert should leave a record that a tester or examiner can follow without asking the analyst:</p>
 <ul>
 <li>the alert, the list it hit and the list entry as it stood on the day of review;</li>
@@ -98,7 +106,7 @@
 </ul>
 <p>The same record also supports the <a href="/use-cases/pep-adverse-media/">PEP and adverse media reviews</a> that often run on the same customer.</p>
 
-<h2>What recent enforcement cases show</h2>
+<h2 id="what-recent-enforcement-cases-show">What recent enforcement cases show</h2>
 <p>OFAC's enforcement releases describe what went wrong in detail. Three recent ones turn on screening:</p>
 <table>
 <thead><tr><th>Case</th><th>Penalty</th><th>Screening problems OFAC described</th></tr></thead>
@@ -111,21 +119,21 @@
 <p>Several of these failures followed a change: a new designation, a software release, a vendor problem or a move to a new screening platform. The TradeStation release warns against a "set it and forget it" approach, and the Bank of America release states that "Each organization remains responsible for its own compliance regardless of whether it relies upon third-party providers."</p>
 <p>In practice that means testing screening after every list update, software release, vendor change and platform migration; giving exact name and date-of-birth matches the highest priority; and keeping a written escalation path for likely matches.</p>
 
-<h2>How long to keep the records</h2>
+<h2 id="how-long-to-keep-the-records">How long to keep the records</h2>
 <p>In April 2024, Public Law 118-50 extended the statute of limitations for violations of the main sanctions statutes, IEEPA and TWEA, from five years to 10. OFAC then extended its recordkeeping requirement to match, in a <a href="https://www.govinfo.gov/content/pkg/FR-2025-03-21/html/2025-04864.htm">rule that took effect in March 2025</a>. <a href="https://www.ecfr.gov/current/title-31/section-501.601">31 CFR 501.601</a> now requires records to be kept "for at least 10 years after the date of such transaction". Separately, blocked property held on June 30 has to be reported every year by September 30.</p>
 
-<h2>Common questions</h2>
-<h3>Does OFAC require specific screening software?</h3>
+<h2 id="common-questions">Common questions</h2>
+<h3 id="does-ofac-require-specific-screening-software">Does OFAC require specific screening software?</h3>
 <p>No. OFAC calls it primarily a question for your regulator. The Framework does expect the tool to be calibrated to your risk profile and tested routinely.</p>
-<h3>How often should we screen?</h3>
+<h3 id="how-often-should-we-screen">How often should we screen?</h3>
 <p>OFAC says the frequency "must be guided by your organization's internal policies and procedures". The Framework also expects a program to adjust rapidly when OFAC publishes list changes.</p>
-<h3>Will OFAC tell us whether a hit is a real match?</h3>
+<h3 id="will-ofac-tell-us-whether-a-hit-is-a-real-match">Will OFAC tell us whether a hit is a real match?</h3>
 <p>No. OFAC does not confirm potential matches or false positives. It expects a risk-based decision, documented in your records.</p>
-<h3>What is the deadline to report a blocked or rejected transaction?</h3>
+<h3 id="what-is-the-deadline-to-report-a-blocked-or-rejected-transaction">What is the deadline to report a blocked or rejected transaction?</h3>
 <p>10 business days, under 31 CFR 501.603 for blocked property and 501.604 for rejected transactions.</p>
 <p>Related: <a href="/blog/sr-11-7-sr-26-2/">what SR 26-2 changes for model risk at banks</a>.</p>
 
-<h2>Sources</h2>
+<h2 id="sources">Sources</h2>
 <ul>
 <li><a href="https://ofac.treasury.gov/faqs/5">OFAC FAQ 5: When screening for sanctions, how do I determine if I have a valid match?</a></li>
 <li><a href="https://ofac.treasury.gov/media/16331/download?inline">OFAC, A Framework for OFAC Compliance Commitments</a> (May 2019)</li>
@@ -136,12 +144,23 @@
 <li><a href="https://www.govinfo.gov/content/pkg/FR-2025-03-21/html/2025-04864.htm">Federal Register, 90 FR 13286</a> (March 21, 2025)</li>
 <li>OFAC enforcement releases: <a href="https://ofac.treasury.gov/media/937231/download?inline">Bank of America, N.A.</a>, <a href="https://ofac.treasury.gov/media/935351/download?inline">TradeStation Securities</a>, <a href="https://ofac.treasury.gov/media/934501/download?inline">Interactive Brokers</a></li>
 </ul>
-      <aside class="blog-author"><strong>Mehak Tariq, CAMS</strong><span>Certified Anti-Money Laundering Specialist</span></aside>
-      <aside class="blog-cta">
-        <h2>Bring one of your own procedures and see it run.</h2>
-        <p><a class="btn btn--lg" href="/demo/">Book a demo</a> <a href="/use-cases/sanctions-screening/">Sanctions screening use case</a></p>
-      </aside>
+          <aside class="blog-cta">
+            <h2>Bring one of your own procedures and see it run.</h2>
+            <p><a class="btn btn--lg" href="/demo/">Book a demo</a> <a href="/use-cases/sanctions-screening/">Sanctions screening use case</a></p>
+          </aside>
+        </div>
+        <nav class="post-toc" aria-label="Table of contents"><p>Table of contents</p><ol><li class="post-toc__h2"><a href="#what-screening-has-to-catch">What screening has to catch</a></li><li class="post-toc__h2"><a href="#what-ofac-expects-from-a-screening-program">What OFAC expects from a screening program</a></li><li class="post-toc__h2"><a href="#how-to-review-a-potential-match-ofac-s-six-steps">How to review a potential match: OFAC's six steps</a></li><li class="post-toc__h2"><a href="#what-a-disposition-record-should-hold">What a disposition record should hold</a></li><li class="post-toc__h2"><a href="#what-recent-enforcement-cases-show">What recent enforcement cases show</a></li><li class="post-toc__h2"><a href="#how-long-to-keep-the-records">How long to keep the records</a></li><li class="post-toc__h2"><a href="#common-questions">Common questions</a></li><li class="post-toc__h3"><a href="#does-ofac-require-specific-screening-software">Does OFAC require specific screening software?</a></li><li class="post-toc__h3"><a href="#how-often-should-we-screen">How often should we screen?</a></li><li class="post-toc__h3"><a href="#will-ofac-tell-us-whether-a-hit-is-a-real-match">Will OFAC tell us whether a hit is a real match?</a></li><li class="post-toc__h3"><a href="#what-is-the-deadline-to-report-a-blocked-or-rejected-transaction">What is the deadline to report a blocked or rejected transaction?</a></li><li class="post-toc__h2"><a href="#sources">Sources</a></li></ol></nav>
+      </div>
     </article>
+    <section class="post-related wrap" aria-labelledby="related-title">
+      <div class="post-related__head"><div><h2 id="related-title">Read related articles</h2><p>More guides and regulation notes for compliance and operations teams.</p></div><a href="/blog/">View all</a></div>
+      <ul class="uc-grid">
+        <li><a class="uc-card uc-card--img" href="/blog/sr-11-7-sr-26-2/"><img class="blog-img" src="/assets/blog/sr-11-7-sr-26-2-split.png" width="1200" height="630" alt="SR 26-2 shown as the live guidance, replacing SR 11-7" loading="lazy" decoding="async">
+          <span class="uc-card__top"><span>Regulation</span><span>6 min read</span></span>
+          <span class="uc-card__body"><span class="uc-card__title">SR 11-7 rescinded: what SR 26-2 changes for banks</span><span class="uc-card__desc">The Fed, OCC and FDIC replaced the 2011 model risk guidance in April 2026. What changed, who it applies to, and why agentic AI sits outside it.</span><span class="uc-card__desc">Read more</span></span>
+        </a></li>
+      </ul>
+    </section>
   </main>
   <!-- chrome:footer -->
   <footer class="footer">

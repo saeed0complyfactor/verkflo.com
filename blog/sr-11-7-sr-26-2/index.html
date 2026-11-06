@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=09a7e4b4">
+  <link rel="stylesheet" href="/styles.css?v=d34c474d">
   <script type="module" src="/js/main.js?v=80a5a208"></script>
 </head>
 <body>
@@ -51,16 +51,24 @@
   </header>
   <!-- /chrome:header -->
   <main id="main" tabindex="-1">
-    <article class="legal wrap">
-      <a href="/blog/">Blog</a>
-      <p class="blog-meta">Regulation &middot; November 6, 2026 &middot; 6 min read</p>
-      <h1>SR 11-7 rescinded: what SR 26-2 changes for banks</h1>
-      <p class="legal__date">By Mehak Tariq, CAMS</p>
-      <img class="blog-img" src="/assets/blog/sr-11-7-sr-26-2-split.png" width="1200" height="630" alt="SR 26-2 shown as the live guidance, replacing SR 11-7" fetchpriority="high">
+    <article class="post wrap">
+      <header class="post-hero">
+        <div class="post-hero__text">
+          <p class="post-crumb"><a href="/blog/">Blog</a><span aria-hidden="true">›</span><span>Regulation</span></p>
+          <h1>SR 11-7 rescinded: what SR 26-2 changes for banks</h1>
+          <div class="post-by">
+            <span class="post-by__mark" aria-hidden="true">MT</span>
+            <p><b>Mehak Tariq, <abbr title="Certified Anti-Money Laundering Specialist">CAMS</abbr></b><span>November 6, 2026<i aria-hidden="true">•</i>6 min read</span></p>
+          </div>
+        </div>
+        <img class="blog-img" src="/assets/blog/sr-11-7-sr-26-2-split.png" width="1200" height="630" alt="SR 26-2 shown as the live guidance, replacing SR 11-7" fetchpriority="high">
+      </header>
+      <div class="post-grid">
+        <div class="legal post-body">
 <p>On April 17, 2026, the Federal Reserve, the OCC and the FDIC issued revised interagency guidance on model risk management. At the Fed it is <a href="https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm">SR 26-2</a>, and it supersedes SR 11-7, the 2011 model risk guidance. It also supersedes SR 21-8, the 2021 statement on how that guidance applied to systems supporting BSA/AML compliance. The new guidance is aimed mainly at banking organizations with more than $30 billion in assets, and it leaves generative and agentic AI out of scope.</p>
 <p>This article covers what the three agencies issued, what the guidance now says, and what it means for model risk, compliance and AML teams. It explains public guidance and is not legal advice.</p>
 
-<h2>What was issued and what it replaced</h2>
+<h2 id="what-was-issued-and-what-it-replaced">What was issued and what it replaced</h2>
 <table>
 <thead><tr><th>Agency</th><th>Issuance (April 17, 2026)</th><th>What it supersedes or rescinds</th></tr></thead>
 <tbody>
@@ -71,16 +79,16 @@
 </table>
 <p>The guidance itself is a single interagency attachment, "Supervisory Guidance on Model Risk Management" (<a href="https://www.federalreserve.gov/supervisionreg/srletters/SR2602a1.pdf">Federal Reserve copy</a>, <a href="https://www.fdic.gov/model-risk-management-revised-guidance.pdf">FDIC copy</a>). We found no effective date or transition period in the guidance or in the agency letters.</p>
 
-<h2>Who it applies to</h2>
+<h2 id="who-it-applies-to">Who it applies to</h2>
 <p>The guidance says it "is expected to be most relevant to banking organizations with over $30 billion in total assets." For organizations at or below that size, it says that generally excluding them "is consistent with a tailored supervisory approach". The exceptions are organizations with significant exposure to model risk and those doing business outside traditional community banking.</p>
 <p>The agency letters frame this a little differently. The <a href="https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html">OCC bulletin</a> says the guidance applies to all community banks "subject to the limitations discussed in the guidance", and repeats the OCC's 2025 position that community banks are not required to validate models every year. The <a href="https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance">FDIC letter</a> says it applies to all FDIC-supervised institutions. If your bank is below $30 billion and runs complex models, read the exceptions closely.</p>
 <p>The guidance also says it "does not set forth enforceable standards or prescriptive requirements". A footnote adds that supervisory action can still follow from violations of law or unsafe or unsound practices.</p>
 
-<h2>What counts as a model</h2>
+<h2 id="what-counts-as-a-model">What counts as a model</h2>
 <p>The new definition reads: a model is "a complex quantitative method, system, or approach that applies statistical, economic, or financial theories" to turn input data into quantitative estimates. The guidance then excludes simple arithmetic, such as spreadsheet calculations, and deterministic rule-based processes and software that have no statistical, economic or financial theory behind them.</p>
 <p>That exclusion matters for compliance systems. A <a href="/use-cases/transaction-monitoring-alert-triage/">transaction monitoring</a> scenario that fires when a fixed threshold is crossed looks like a deterministic rule-based process. A score that ranks alerts by estimated risk, or a statistical customer segmentation that sets those thresholds, looks like a model. Many monitoring and screening setups contain both, so the inventory question has to be answered component by component.</p>
 
-<h2>What the guidance expects</h2>
+<h2 id="what-the-guidance-expects">What the guidance expects</h2>
 <p>The attachment is organized around model development and use, validation and monitoring, governance and controls, and vendor and third-party products. The main points:</p>
 <ul>
 <li>Effort follows materiality. "Model purpose, together with model exposure, determines model materiality." For immaterial models, risk management "may consist of identifying those models and monitoring model performance". Higher-materiality models get more rigorous oversight.</li>
@@ -93,7 +101,7 @@
 </ul>
 <p>The text does not assign specific roles to the board of directors or senior management. The <a href="https://occ.gov/news-issuances/news-releases/2026/nr-occ-2026-29.html">OCC's news release</a> describes the aim as to "reduce unnecessary burden and promote risk-based examination across institutions of all sizes."</p>
 
-<h2>Generative and agentic AI are out of scope</h2>
+<h2 id="generative-and-agentic-ai-are-out-of-scope">Generative and agentic AI are out of scope</h2>
 <p>Footnote 3 of the guidance says: "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance." The principles do apply to "traditional statistical and quantitative models and non-generative, non-agentic AI models."</p>
 <p>For the tools left out, the footnote says a bank's own "risk management and governance practices should guide the determination of appropriate governance and controls". The OCC release adds that the agencies plan a request for information on model risk management that will consider banks' use of AI, including generative and agentic AI. No date has been given.</p>
 <p>So for now, each bank sets its own controls for LLM tools and AI agents. Examiners can still act on unsafe or unsound practices, and tools bought from vendors still fall under the 2023 <a href="https://www.occ.gov/news-issuances/bulletins/2023/bulletin-2023-17.html">interagency guidance on third-party relationships</a>. Controls worth having in place while the agencies consult:</p>
@@ -107,7 +115,7 @@
 </ul>
 <p>For one example of these controls in a product, see <a href="/security/">how Verkflo versions procedures, pauses for review and logs each run</a>.</p>
 
-<h2>What it means for AML and compliance teams</h2>
+<h2 id="what-it-means-for-aml-and-compliance-teams">What it means for AML and compliance teams</h2>
 <p>SR 21-8 was the 2021 statement on applying model risk guidance to systems that support BSA/AML compliance. It is superseded, and we found nothing AML-specific in SR 26-2. AML program requirements still apply, so monitoring and <a href="/blog/sanctions-screening/">sanctions screening</a> still have to work. What changes is how much model risk process each component needs:</p>
 <ul>
 <li>Recheck the inventory against the new definition. Rules-only scenarios and list-matching logic may fall outside it; statistical scoring, tuning analysis and machine-learning components fall inside.</li>
@@ -117,17 +125,17 @@
 <li>Watch for the request for information and consider responding if your institution uses AI in compliance work.</li>
 </ul>
 
-<h2>Common questions</h2>
-<h3>Is SR 11-7 still in effect?</h3>
+<h2 id="common-questions">Common questions</h2>
+<h3 id="is-sr-11-7-still-in-effect">Is SR 11-7 still in effect?</h3>
 <p>No. The SR 26-2 letter says the revised guidance supersedes and replaces SR 11-7, issued April 4, 2011.</p>
-<h3>Does SR 26-2 cover LLMs and AI agents?</h3>
+<h3 id="does-sr-26-2-cover-llms-and-ai-agents">Does SR 26-2 cover LLMs and AI agents?</h3>
 <p>Generative and agentic AI models are outside its scope. Non-generative, non-agentic AI models are inside it, which can include a machine-learning risk score.</p>
-<h3>Do banks under $30 billion have to follow it?</h3>
+<h3 id="do-banks-under-30-billion-have-to-follow-it">Do banks under $30 billion have to follow it?</h3>
 <p>The guidance expects to be most relevant above $30 billion and generally excludes smaller organizations, unless they have significant model risk or business outside traditional community banking. The OCC and FDIC letters still describe it as applying to the banks they supervise, within those limits.</p>
-<h3>Is there a deadline to comply?</h3>
+<h3 id="is-there-a-deadline-to-comply">Is there a deadline to comply?</h3>
 <p>None is stated. The guidance is not enforceable in itself, though supervisory action can still follow from unsafe or unsound practices.</p>
 
-<h2>Sources</h2>
+<h2 id="sources">Sources</h2>
 <ul>
 <li><a href="https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm">Federal Reserve, SR 26-2: Revised Guidance on Model Risk Management</a> (April 17, 2026)</li>
 <li><a href="https://www.federalreserve.gov/supervisionreg/srletters/SR2602a1.pdf">Supervisory Guidance on Model Risk Management</a> (interagency attachment)</li>
@@ -136,12 +144,23 @@
 <li><a href="https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance">FDIC FIL-15-2026</a></li>
 <li><a href="https://www.occ.gov/news-issuances/bulletins/2023/bulletin-2023-17.html">OCC Bulletin 2023-17: Third-Party Relationships: Interagency Guidance on Risk Management</a></li>
 </ul>
-      <aside class="blog-author"><strong>Mehak Tariq, CAMS</strong><span>Certified Anti-Money Laundering Specialist</span></aside>
-      <aside class="blog-cta">
-        <h2>Bring one of your own procedures and see it run.</h2>
-        <p><a class="btn btn--lg" href="/demo/">Book a demo</a> <a href="/security/">Controls for AI agents</a></p>
-      </aside>
+          <aside class="blog-cta">
+            <h2>Bring one of your own procedures and see it run.</h2>
+            <p><a class="btn btn--lg" href="/demo/">Book a demo</a> <a href="/security/">Controls for AI agents</a></p>
+          </aside>
+        </div>
+        <nav class="post-toc" aria-label="Table of contents"><p>Table of contents</p><ol><li class="post-toc__h2"><a href="#what-was-issued-and-what-it-replaced">What was issued and what it replaced</a></li><li class="post-toc__h2"><a href="#who-it-applies-to">Who it applies to</a></li><li class="post-toc__h2"><a href="#what-counts-as-a-model">What counts as a model</a></li><li class="post-toc__h2"><a href="#what-the-guidance-expects">What the guidance expects</a></li><li class="post-toc__h2"><a href="#generative-and-agentic-ai-are-out-of-scope">Generative and agentic AI are out of scope</a></li><li class="post-toc__h2"><a href="#what-it-means-for-aml-and-compliance-teams">What it means for AML and compliance teams</a></li><li class="post-toc__h2"><a href="#common-questions">Common questions</a></li><li class="post-toc__h3"><a href="#is-sr-11-7-still-in-effect">Is SR 11-7 still in effect?</a></li><li class="post-toc__h3"><a href="#does-sr-26-2-cover-llms-and-ai-agents">Does SR 26-2 cover LLMs and AI agents?</a></li><li class="post-toc__h3"><a href="#do-banks-under-30-billion-have-to-follow-it">Do banks under $30 billion have to follow it?</a></li><li class="post-toc__h3"><a href="#is-there-a-deadline-to-comply">Is there a deadline to comply?</a></li><li class="post-toc__h2"><a href="#sources">Sources</a></li></ol></nav>
+      </div>
     </article>
+    <section class="post-related wrap" aria-labelledby="related-title">
+      <div class="post-related__head"><div><h2 id="related-title">Read related articles</h2><p>More guides and regulation notes for compliance and operations teams.</p></div><a href="/blog/">View all</a></div>
+      <ul class="uc-grid">
+        <li><a class="uc-card uc-card--img" href="/blog/sanctions-screening/"><img class="blog-img" src="/assets/blog/sanctions-screening-split.png" width="1200" height="630" alt="Screening hit checklist: confirm the list, check the nexus, compare identifiers, block or reject, report" loading="lazy" decoding="async">
+          <span class="uc-card__top"><span>Guides</span><span>7 min read</span></span>
+          <span class="uc-card__body"><span class="uc-card__title">Sanctions screening: how to review a hit</span><span class="uc-card__desc">What OFAC expects from a screening program, how to work a potential match step by step, and the screening failures behind three recent penalties.</span><span class="uc-card__desc">Read more</span></span>
+        </a></li>
+      </ul>
+    </section>
   </main>
   <!-- chrome:footer -->
   <footer class="footer">
