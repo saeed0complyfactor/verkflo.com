@@ -1206,6 +1206,10 @@ html:not(.js) .fv-panels { min-height: 0; }
 .blog-feature .uc-card__title { font-size: 1.5rem; }
 .blog-feature .uc-card__desc { font-size: 1rem; }
 .uc-card__top > span { font-size: .8125rem; color: var(--ink-3); }
+.uc-card--img { grid-template-rows: auto auto 1fr; }
+.blog-img { display: block; width: 100%; height: auto; }
+.uc-card .blog-img { border-bottom: 1px solid var(--line); }
+.legal .blog-img { margin-top: 24px; border: 1px solid var(--line); border-radius: var(--radius); }
 .legal h3 { margin-top: 24px; font-size: 1.0625rem; }
 .legal ol { margin-top: 12px; padding-left: 20px; list-style: decimal; display: grid; gap: 6px; color: var(--ink-2); }
 .legal table { width: 100%; margin-top: 16px; border-collapse: collapse; font-size: .875rem; display: block; overflow-x: auto; }
