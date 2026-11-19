@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KYC onboarding automation with AI agents | Verkflo</title>
-  <meta name="description" content="KYC onboarding automation for banks and fintechs. An AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends hits to a reviewer.">
+  <title>KYC onboarding software and process automation | Verkflo</title>
+  <meta name="description" content="Automate the KYC onboarding process: an AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends each hit to a reviewer.">
   <link rel="canonical" href="https://verkflo.com/use-cases/kyc-onboarding/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <meta property="og:title" content="KYC onboarding automation with AI agents | Verkflo">
-  <meta property="og:description" content="KYC onboarding automation for banks and fintechs. An AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends hits to a reviewer.">
+  <meta property="og:title" content="KYC onboarding software and process automation | Verkflo">
+  <meta property="og:description" content="Automate the KYC onboarding process: an AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends each hit to a reviewer.">
   <meta property="og:url" content="https://verkflo.com/use-cases/kyc-onboarding/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Verkflo">
@@ -19,7 +19,7 @@
   <meta property="og:image:alt" content="Verkflo: AI agents for KYC, AML and compliance operations">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://verkflo.com/assets/og/verkflo-share.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://verkflo.com/"},{"@type":"ListItem","position":2,"name":"Use cases","item":"https://verkflo.com/use-cases/"},{"@type":"ListItem","position":3,"name":"KYC onboarding review","item":"https://verkflo.com/use-cases/kyc-onboarding/"}]},{"@type":"WebPage","@id":"https://verkflo.com/use-cases/kyc-onboarding/","url":"https://verkflo.com/use-cases/kyc-onboarding/","name":"KYC onboarding automation with AI agents | Verkflo","description":"KYC onboarding automation for banks and fintechs. An AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends hits to a reviewer.","isPartOf":{"@id":"https://verkflo.com/#website"},"about":{"@type":"Thing","name":"KYC onboarding review"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://verkflo.com/"},{"@type":"ListItem","position":2,"name":"Use cases","item":"https://verkflo.com/use-cases/"},{"@type":"ListItem","position":3,"name":"KYC onboarding review","item":"https://verkflo.com/use-cases/kyc-onboarding/"}]},{"@type":"WebPage","@id":"https://verkflo.com/use-cases/kyc-onboarding/","url":"https://verkflo.com/use-cases/kyc-onboarding/","name":"KYC onboarding software and process automation | Verkflo","description":"Automate the KYC onboarding process: an AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends each hit to a reviewer.","isPartOf":{"@id":"https://verkflo.com/#website"},"about":{"@type":"Thing","name":"KYC onboarding review"}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -210,7 +210,7 @@
       <h2 id="faq-title">Questions about KYC onboarding automation</h2>
       <div class="faq__list">
         <details class="faq__item"><summary>Does the agent approve applicants on its own?<svg class="faq__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="faq__a"><div><p>Only where your procedure allows it. In the clean example the rating is Medium and no rule calls for a person, so the agent approves and logs the rule it used. A screening hit or a High rating pauses the run.</p></div></div></details>
-        <details class="faq__item"><summary>Which systems does it read from?<svg class="faq__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="faq__a"><div><p>Sumsub for the applicant and documents, ComplyAdvantage for screening and Google Drive for the case folder. Other systems with an API connect through Custom REST.</p></div></div></details>
+        <details class="faq__item"><summary>Is this KYC onboarding software?<svg class="faq__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="faq__a"><div><p>It runs your KYC onboarding process on top of the tools you have. Verkflo is not an identity verification service: it reads the applicant and documents from Sumsub, screens in ComplyAdvantage and keeps the case folder in Google Drive. Other systems with an API connect through Custom REST.</p></div></div></details>
         <details class="faq__item"><summary>What happens when a document is missing?<svg class="faq__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="faq__a"><div><p>The agent drafts the request and a reviewer approves it. Your team sends it, and the run waits until the document arrives.</p></div></div></details>
         <details class="faq__item"><summary>Can we change the risk rules later?<svg class="faq__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="faq__a"><div><p>Yes. Edit the procedure or its CEL rules and publish a new version. Finished runs keep the version they followed, and new runs use the new one.</p></div></div></details>
       </div>

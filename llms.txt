@@ -11,18 +11,18 @@
 ## Use cases
 
 - [Use cases](https://verkflo.com/use-cases/): AI agent use cases for banks and fintechs: KYC and KYB reviews, sanctions and PEP screening, alert triage, disputes, credit checks and operations procedures.
-- [KYC onboarding review](https://verkflo.com/use-cases/kyc-onboarding/): KYC onboarding automation for banks and fintechs. An AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends hits to a reviewer.
-- [KYB and beneficial ownership](https://verkflo.com/use-cases/kyb-beneficial-ownership/): Map beneficial owners above your threshold, screen the company and each owner, and send ownership gaps to a reviewer. KYB and UBO verification as an AI agent.
-- [Sanctions screening](https://verkflo.com/use-cases/sanctions-screening/): Screen each new counterparty in ComplyAdvantage before the first payment. Possible matches go to a named reviewer, and the payment hold stays until they decide.
+- [KYC onboarding review](https://verkflo.com/use-cases/kyc-onboarding/): Automate the KYC onboarding process: an AI agent checks applicant documents from Sumsub, screens in ComplyAdvantage and sends each hit to a reviewer.
+- [KYB and beneficial ownership](https://verkflo.com/use-cases/kyb-beneficial-ownership/): KYB verification for business onboarding: map beneficial owners above your threshold, screen the company and each owner, and send ownership gaps to a reviewer.
+- [Sanctions screening](https://verkflo.com/use-cases/sanctions-screening/): Automated sanctions screening before the first payment: screen in ComplyAdvantage, send possible matches to a named reviewer and hold payment until they decide.
 - [PEP and adverse media review](https://verkflo.com/use-cases/pep-adverse-media/): When ComplyAdvantage returns a PEP or adverse media hit, an AI agent compares it with the customer file, summarizes the articles and briefs a reviewer.
-- [Periodic KYC review](https://verkflo.com/use-cases/periodic-kyc-review/): Periodic KYC review automation on your own cycle: find reviews due by risk rating, refresh and re-screen each file, and show a reviewer what changed.
+- [Periodic KYC review](https://verkflo.com/use-cases/periodic-kyc-review/): Periodic KYC review and KYC refresh on your own cycle, with event-driven checks toward perpetual KYC: find reviews due, re-screen each file, show what changed.
 - [Transaction monitoring alert triage](https://verkflo.com/use-cases/transaction-monitoring-alert-triage/): Triage transaction monitoring alerts with transactions, profile and past alerts gathered first. Your disposition rules decide which alerts reach an analyst.
 - [Fraud alert triage](https://verkflo.com/use-cases/fraud-alert-triage/): Fraud alert triage automation that pulls device, login and transaction context, applies your rules and gives an analyst a recommendation on each hold.
 - [Chargebacks and disputes](https://verkflo.com/use-cases/chargebacks-disputes/): Card issuers: prepare cardholder disputes with the statement, transaction data and a reason code mapped per your scheme rules, ready for an analyst to approve.
 - [Credit limit increase review](https://verkflo.com/use-cases/credit-limit-increase/): Credit limit increase reviews for card issuers. Account conduct and exposure checks run against your policy, and any decline or exception goes to a person.
 - [Credit file check](https://verkflo.com/use-cases/credit-file-check/): Credit file review before underwriting. An AI agent compares each application with the bureau file and sends differences and thin files to an underwriter.
 - [Loan application completeness](https://verkflo.com/use-cases/loan-application-completeness/): Check loan application completeness before underwriting. An AI agent compares each file with your checklist, flags figures that disagree and drafts requests.
-- [Vendor due diligence](https://verkflo.com/use-cases/vendor-due-diligence/): Vendor due diligence for banks and fintechs: check each supplier's pack against your list, screen the company and its owners, and hold setup until gaps clear.
+- [Vendor due diligence](https://verkflo.com/use-cases/vendor-due-diligence/): Third-party risk management starts with vendor due diligence: check each supplier pack, screen the company and its owners, and hold setup until gaps clear.
 - [Complaints triage](https://verkflo.com/use-cases/complaints-triage/): Complaints triage: categorize each complaint against your taxonomy on arrival, note the response date your policy sets and route sensitive cases to a person.
 - [Account closure review](https://verkflo.com/use-cases/account-closure-review/): Account closure review for banks and fintechs. Balances, pending items, holds and open alerts are checked against your list, and exceptions wait for a reviewer.
 
@@ -36,8 +36,8 @@
 - [KYC automation](https://verkflo.com/kyc-automation/): Automate KYC reviews with AI agents that follow your written procedure: onboarding, periodic reviews and screening, with human review and an audit log.
 - [KYB automation](https://verkflo.com/kyb-automation/): Automate KYB reviews with AI agents that follow your procedure: company documents, beneficial owners and screening, with gaps sent to a reviewer and logged.
 - [AML automation](https://verkflo.com/aml-automation/): AML operations automation for banks and fintechs: agents gather the context for sanctions hits, monitoring alerts and fraud alerts, and analysts decide.
-- [Compliance operations automation](https://verkflo.com/compliance-operations-automation/): Automate compliance operations with AI agents that run your written procedures, pause for review where your rules say and record each step in an audit log.
-- [Banking operations automation](https://verkflo.com/banking-operations-automation/): Banking operations automation for card, lending and account teams: agents prepare disputes, credit checks, closures and complaints for your staff to decide.
+- [Compliance operations automation](https://verkflo.com/compliance-operations-automation/): AI compliance software for operations teams: agents run your written procedures for reviews, screening and triage, pause for review and log each step.
+- [Banking operations automation](https://verkflo.com/banking-operations-automation/): Banking automation software for card, lending and account teams: agents prepare disputes, credit checks, closures and complaints for your staff to decide.
 - [Fintech operations automation](https://verkflo.com/fintech-operations-automation/): Fintech operations automation for small teams: AI agents run KYC and KYB onboarding, disputes, complaints and vendor reviews from your written procedures.
 
 ## Blog
