@@ -43,6 +43,7 @@
 ## Blog
 
 - [Blog](https://verkflo.com/blog/): Guides, research and regulation notes for compliance and operations teams at banks and fintechs.
+- [What is KYC? Know your customer in banking](https://verkflo.com/blog/what-is-kyc/): KYC (know your customer) is how a bank identifies, verifies and understands each customer. The four elements, the data it collects, and how a team runs it.
 - [KYC software: what banks need it to do](https://verkflo.com/blog/kyc-software/): What KYC software has to do for a US bank: identity checks, beneficial owners, screening and records, how to vet a vendor and how an ops team runs it daily.
 - [Positive pay: how it works and how banks run it](https://verkflo.com/blog/positive-pay/): How positive pay works: the issue file, how a bank matches presented checks, the main service types, where it stops, and how ops teams work each exception.
 - [Sanctions screening: how to review a hit](https://verkflo.com/blog/sanctions-screening/): How sanctions screening works for US banks and fintechs: OFAC lists, the 50 Percent Rule, a six-step review of a potential match, and what enforcement shows.
