@@ -33,7 +33,7 @@
 - [Sumsub integration](https://verkflo.com/integrations/sumsub/): Connect Sumsub to Verkflo agents: fetch applicant data, risk ratings, KYB company data and AML hits, and start a KYC run from the applicantReviewed webhook.
 - [ComplyAdvantage integration](https://verkflo.com/integrations/complyadvantage/): Connect ComplyAdvantage to Verkflo agents: screen names against sanctions, PEP and adverse media and fetch the listed entry behind each hit for a reviewer.
 - [Solutions](https://verkflo.com/solutions/): Verkflo solutions for banks and fintechs: KYC, KYB and AML automation, compliance operations, and banking and fintech operations run from your procedures.
-- [KYC automation](https://verkflo.com/kyc-automation/): Automate KYC reviews with AI agents that follow your written procedure: onboarding, periodic reviews and screening, with human review and an audit log.
+- [KYC automation](https://verkflo.com/kyc-automation/): Automated KYC checks run by AI agents that follow your written procedure: onboarding, periodic reviews and screening, with human review and an audit log.
 - [KYB automation](https://verkflo.com/kyb-automation/): Automate KYB reviews with AI agents that follow your procedure: company documents, beneficial owners and screening, with gaps sent to a reviewer and logged.
 - [AML automation](https://verkflo.com/aml-automation/): AML operations automation for banks and fintechs: agents gather the context for sanctions hits, monitoring alerts and fraud alerts, and analysts decide.
 - [Compliance operations automation](https://verkflo.com/compliance-operations-automation/): AI compliance software for operations teams: agents run your written procedures for reviews, screening and triage, pause for review and log each step.
@@ -43,6 +43,7 @@
 ## Blog
 
 - [Blog](https://verkflo.com/blog/): Guides, research and regulation notes for compliance and operations teams at banks and fintechs.
+- [KYC verification: how banks verify identity](https://verkflo.com/blog/kyc-verification/): KYC verification for banks and fintechs: documentary and non-documentary checks, what to do when identity cannot be verified, vendors, deepfakes and the record.
 - [Reg E: what Regulation E requires of banks](https://verkflo.com/blog/reg-e/): Reg E explained for banks and fintechs: which transfers Regulation E covers, consumer liability limits, error deadlines, disclosures and how a team runs it.
 - [What is KYC? Know your customer in banking](https://verkflo.com/blog/what-is-kyc/): KYC (know your customer) is how a bank identifies, verifies and understands each customer. The four elements, the data it collects, and how a team runs it.
 - [KYC software: what banks need it to do](https://verkflo.com/blog/kyc-software/): What KYC software has to do for a US bank: identity checks, beneficial owners, screening and records, how to vet a vendor and how an ops team runs it daily.
