@@ -43,6 +43,7 @@
 ## Blog
 
 - [Blog](https://verkflo.com/blog/): Guides, research and regulation notes for compliance and operations teams at banks and fintechs.
+- [Account takeover fraud prevention: a bank playbook](https://verkflo.com/blog/account-takeover-prevention/): Account takeover fraud prevention for banks and fintechs: what the FFIEC expects, controls at login, resets and payments, which MFA holds up, and team steps.
 - [KYC verification: how banks verify identity](https://verkflo.com/blog/kyc-verification/): KYC verification for banks and fintechs: documentary and non-documentary checks, what to do when identity cannot be verified, vendors, deepfakes and the record.
 - [Reg E: what Regulation E requires of banks](https://verkflo.com/blog/reg-e/): Reg E explained for banks and fintechs: which transfers Regulation E covers, consumer liability limits, error deadlines, disclosures and how a team runs it.
 - [What is KYC? Know your customer in banking](https://verkflo.com/blog/what-is-kyc/): KYC (know your customer) is how a bank identifies, verifies and understands each customer. The four elements, the data it collects, and how a team runs it.
