@@ -43,6 +43,7 @@
 ## Blog
 
 - [Blog](https://verkflo.com/blog/): Guides, research and regulation notes for compliance and operations teams at banks and fintechs.
+- [Currency transaction report (CTR): how banks file](https://verkflo.com/blog/currency-transaction-report/): Currency transaction report rules for banks: the $10,000 test, aggregation, the ID to record, the 15-day deadline, exemptions and how a team files each CTR.
 - [Agentic AI in AML: where agents fit in alert work](https://verkflo.com/blog/agentic-ai-aml/): Agentic AI in AML for bank compliance teams: which alert steps an AI agent can run, where an analyst decides, what to log and how to test before going live.
 - [AI in AML: where banks use it and what to document](https://verkflo.com/blog/ai-in-aml/): AI in AML for banks and fintechs: where machine learning is used in monitoring, screening, risk rating and cases, and what to document and keep human.
 - [AML case management: from alert to SAR decision](https://verkflo.com/blog/aml-case-management/): AML case management for banks and fintechs: how a case runs from alert to SAR decision, the case file examiners test, escalation, QA and a software checklist.
