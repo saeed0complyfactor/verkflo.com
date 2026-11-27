@@ -62,6 +62,6 @@
 
 ## Legal
 
-- [Cookie Policy](https://verkflo.com/cookies/): The Verkflo website sets no cookies and uses no analytics, advertising or other tracking technologies, so there is no cookie banner for you to accept.
-- [Privacy Policy](https://verkflo.com/privacy/): How the Verkflo website handles your information: what the demo form sends to Web3Forms and to us, how we use it, how long we keep it and how to reach us.
+- [Cookie Policy](https://verkflo.com/cookies/): The Verkflo website uses Google Analytics and Microsoft Clarity cookies only if you accept them in the banner. What they do and how to change your choice.
+- [Privacy Policy](https://verkflo.com/privacy/): How the Verkflo website handles your information: the demo form, Google Analytics and Microsoft Clarity if you accept them, how we use it and how to reach us.
 - [Terms of Use](https://verkflo.com/terms/): The terms for using the Verkflo website: acceptable use, no professional advice, content provided as is, third-party names and logos, and how to reach us.

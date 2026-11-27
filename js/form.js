@@ -53,6 +53,7 @@ export function initDemoForm(form, { config = SITE, fetchFn = fetch } = {}) {
       const out = await res.json().catch(() => ({}));
       if (!res.ok || out.success === false) throw new Error('http');
       show("Thank you. We'll be in touch to find a time.", 'ok');
+      window.gtag?.("event", "generate_lead", { form: form.dataset.demoForm || "demo" });
       form.reset();
     } catch (err) {
       show(err.message === 'no-endpoint' ? FALLBACK : "That didn't go through. Please check your connection and try again.", 'err');

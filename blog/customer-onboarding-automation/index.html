@@ -23,14 +23,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=a47032fc">
+  <link rel="stylesheet" href="/styles.css?v=d9aa91f2">
   <script type="module" src="/js/main.js?v=80a5a208"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <!-- chrome:header -->
   <div class="announce">
-    <p>Verkflo is in early access. <a href="/demo/">Book a demo</a></p>
+    <p>Verkflo is in early access. <a href="/demo/" data-track="announce-demo">Book a demo</a></p>
   </div>
   <header class="nav" id="top">
     <div class="nav__inner wrap">
@@ -43,8 +43,8 @@
         <a href="/solutions/">Solutions</a>
         <a href="/blog/">Blog</a>
         <div class="nav__cta">
-          <a class="btn btn--ghost" href="/demo/">Book a demo</a>
-          <a class="btn" href="/demo/">Get started</a>
+          <a class="btn btn--ghost" href="/demo/" data-track="nav-demo">Book a demo</a>
+          <a class="btn" href="/demo/" data-track="nav-start">Get started</a>
         </div>
       </nav>
     </div>
@@ -158,7 +158,7 @@
 </ul>
           <aside class="blog-cta">
             <h2>Bring one of your own procedures and see it run.</h2>
-            <p><a class="btn btn--lg" href="/demo/">Book a demo</a> <a href="/use-cases/kyc-onboarding/">KYC onboarding review</a></p>
+            <p><a class="btn btn--lg" href="/demo/" data-track="blog-post-demo">Book a demo</a> <a href="/use-cases/kyc-onboarding/">KYC onboarding review</a></p>
           </aside>
         </div>
         <nav class="post-toc" aria-label="Table of contents"><p>Table of contents</p><ol><li class="post-toc__h2"><a href="#what-the-rules-require-at-account-opening">What the rules require at account opening</a></li><li class="post-toc__h3"><a href="#identity-the-cip-rule">Identity: the CIP rule</a></li><li class="post-toc__h3"><a href="#beneficial-owners-of-business-customers">Beneficial owners of business customers</a></li><li class="post-toc__h3"><a href="#customer-due-diligence">Customer due diligence</a></li><li class="post-toc__h2"><a href="#which-onboarding-steps-to-automate-and-which-stay-with-a-person">Which onboarding steps to automate and which stay with a person</a></li><li class="post-toc__h2"><a href="#how-to-automate-customer-onboarding-step-by-step">How to automate customer onboarding, step by step</a></li><li class="post-toc__h2"><a href="#what-the-written-procedure-must-say">What the written procedure must say</a></li><li class="post-toc__h2"><a href="#exceptions-and-manual-review">Exceptions and manual review</a></li><li class="post-toc__h2"><a href="#what-to-log-for-examiners">What to log for examiners</a></li><li class="post-toc__h2"><a href="#how-to-test-before-going-live">How to test before going live</a></li><li class="post-toc__h2"><a href="#what-customer-onboarding-software-for-banks-has-to-support">What customer onboarding software for banks has to support</a></li><li class="post-toc__h2"><a href="#common-questions">Common questions</a></li><li class="post-toc__h3"><a href="#what-is-the-onboarding-process-for-banks">What is the onboarding process for banks?</a></li><li class="post-toc__h3"><a href="#what-is-a-customer-onboarding-process">What is a customer onboarding process?</a></li><li class="post-toc__h3"><a href="#can-customer-onboarding-be-fully-automated">Can customer onboarding be fully automated?</a></li><li class="post-toc__h3"><a href="#do-we-need-to-re-identify-beneficial-owners-for-every-new-account">Do we need to re-identify beneficial owners for every new account?</a></li><li class="post-toc__h2"><a href="#sources">Sources</a></li></ol></nav>
@@ -192,9 +192,18 @@
         <div><h3>Trust</h3><ul><li><a href="/security/">Security</a></li><li><a href="/#controls">Controls</a></li></ul></div>
         <div><h3>Company</h3><ul><li><a href="/about/">About</a></li><li><a href="/integrations/">Integrations</a></li><li><a href="/blog/">Blog</a></li><li><a href="/demo/">Book a demo</a></li><li><a href="mailto:hello@verkflo.com">Contact</a></li></ul></div>
       </nav>
-      <div class="footer__bar"><a class="wordmark" href="/" aria-label="Verkflo home"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M7 8l5 9 5-9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Verkflo</span></a><ul class="footer__legal"><li><a href="/terms/">Terms of Use</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/cookies/">Cookie Policy</a></li></ul></div>
+      <div class="footer__bar"><a class="wordmark" href="/" aria-label="Verkflo home"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M7 8l5 9 5-9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Verkflo</span></a><ul class="footer__legal"><li><a href="/terms/">Terms of Use</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/cookies/">Cookie Policy</a></li><li><button type="button" class="footer__btn" data-consent-open hidden>Cookie choices</button></li></ul></div>
     </div>
   </footer>
+  <div class="consent" role="region" aria-label="Cookie choices" data-consent hidden>
+    <p>We'd like to use Google Analytics and Microsoft Clarity cookies to understand how this site is used. They load only if you accept. <a href="/cookies/">How we use data</a></p>
+    <div class="consent__actions">
+      <button class="btn btn--ghost" type="button" data-consent-no>Decline</button>
+      <button class="btn" type="button" data-consent-yes>Accept</button>
+    </div>
+  </div>
+  <script type="module" src="/site-config.js"></script>
+  <script defer src="/js/analytics.js"></script>
   <!-- /chrome:footer -->
 </body>
 </html>

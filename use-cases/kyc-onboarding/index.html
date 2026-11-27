@@ -23,14 +23,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=a47032fc">
+  <link rel="stylesheet" href="/styles.css?v=d9aa91f2">
   <script type="module" src="/js/main.js?v=80a5a208"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <!-- chrome:header -->
   <div class="announce">
-    <p>Verkflo is in early access. <a href="/demo/">Book a demo</a></p>
+    <p>Verkflo is in early access. <a href="/demo/" data-track="announce-demo">Book a demo</a></p>
   </div>
   <header class="nav" id="top">
     <div class="nav__inner wrap">
@@ -43,8 +43,8 @@
         <a href="/solutions/">Solutions</a>
         <a href="/blog/">Blog</a>
         <div class="nav__cta">
-          <a class="btn btn--ghost" href="/demo/">Book a demo</a>
-          <a class="btn" href="/demo/">Get started</a>
+          <a class="btn btn--ghost" href="/demo/" data-track="nav-demo">Book a demo</a>
+          <a class="btn" href="/demo/" data-track="nav-start">Get started</a>
         </div>
       </nav>
     </div>
@@ -56,7 +56,7 @@
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/use-cases/">Use cases</a><span aria-hidden="true">/</span><a href="/use-cases/#aml-compliance">AML &amp; compliance</a></nav>
       <h1 id="uc-title">Automate KYC onboarding reviews from your written procedure</h1>
       <p class="ucd-hero__lede">A KYC agent follows your onboarding procedure on each applicant: it reads the documents, runs the screening, applies your rules and asks a reviewer wherever the procedure says a person decides.</p>
-      <p class="ucd-hero__cta"><a class="btn btn--lg" href="/demo/">Book a demo</a><a class="btn btn--ghost btn--lg" href="#how">See how it runs</a></p>
+      <p class="ucd-hero__cta"><a class="btn btn--lg" href="/demo/" data-track="usecase-hero-demo">Book a demo</a><a class="btn btn--ghost btn--lg" href="#how">See how it runs</a></p>
       <div class="works">
         <p class="works__label">Works with</p>
         <ul class="works__row"><li class="works__logo"><img src="/assets/logos/sumsub.png" alt="Sumsub" width="24" height="24"></li><li class="works__logo"><img src="/assets/logos/complyadvantage.jpg" alt="ComplyAdvantage" width="24" height="24"></li><li class="works__logo"><img src="/assets/logos/googledrive.svg" alt="Google Drive" width="24" height="24"></li><li class="works__logo" title="Custom REST"><svg class="ico" aria-hidden="true"><use href="#ic-code"/></svg><span class="visually-hidden">Custom REST</span></li></ul>
@@ -249,7 +249,7 @@
         <p class="shapes" aria-hidden="true"><i class="shape shape--blue"></i><i class="shape shape--teal"></i><i class="shape shape--amber"></i><i class="shape shape--slate"></i></p>
         <h2 id="cta-title">Run this procedure as an agent</h2>
         <p>Book a demo with your own version of this procedure, and we'll show it running with each step logged.</p>
-        <a class="btn btn--lg" href="/demo/">Book a demo</a>
+        <a class="btn btn--lg" href="/demo/" data-track="cta-demo">Book a demo</a>
       </div>
     </section>
   </main>
@@ -263,9 +263,18 @@
         <div><h3>Trust</h3><ul><li><a href="/security/">Security</a></li><li><a href="/#controls">Controls</a></li></ul></div>
         <div><h3>Company</h3><ul><li><a href="/about/">About</a></li><li><a href="/integrations/">Integrations</a></li><li><a href="/blog/">Blog</a></li><li><a href="/demo/">Book a demo</a></li><li><a href="mailto:hello@verkflo.com">Contact</a></li></ul></div>
       </nav>
-      <div class="footer__bar"><a class="wordmark" href="/" aria-label="Verkflo home"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M7 8l5 9 5-9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Verkflo</span></a><ul class="footer__legal"><li><a href="/terms/">Terms of Use</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/cookies/">Cookie Policy</a></li></ul></div>
+      <div class="footer__bar"><a class="wordmark" href="/" aria-label="Verkflo home"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="currentColor"/><path d="M7 8l5 9 5-9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Verkflo</span></a><ul class="footer__legal"><li><a href="/terms/">Terms of Use</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/cookies/">Cookie Policy</a></li><li><button type="button" class="footer__btn" data-consent-open hidden>Cookie choices</button></li></ul></div>
     </div>
   </footer>
+  <div class="consent" role="region" aria-label="Cookie choices" data-consent hidden>
+    <p>We'd like to use Google Analytics and Microsoft Clarity cookies to understand how this site is used. They load only if you accept. <a href="/cookies/">How we use data</a></p>
+    <div class="consent__actions">
+      <button class="btn btn--ghost" type="button" data-consent-no>Decline</button>
+      <button class="btn" type="button" data-consent-yes>Accept</button>
+    </div>
+  </div>
+  <script type="module" src="/site-config.js"></script>
+  <script defer src="/js/analytics.js"></script>
   <!-- /chrome:footer -->
 </body>
 </html>
